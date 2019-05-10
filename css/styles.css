@@ -103,7 +103,6 @@ body section.home > div:nth-child(3) {
 }
 html section.home > div:nth-child(3) > a,
 body section.home > div:nth-child(3) > a {
-  margin-top: .05rem;
   display: inline-block;
   width: 3.61rem;
   height: .98rem;
