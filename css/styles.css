@@ -93,27 +93,6 @@ body section.home > div:nth-child(2) > p:nth-child(5) {
   background: url('../images/h_talk_05.png') no-repeat;
   background-size: cover;
 }
-html section.home > div:nth-child(3),
-body section.home > div:nth-child(3) {
-  width: 7.5rem;
-  height: 1.86rem;
-  background: url('../images/h_03_03.png') no-repeat;
-  background-size: cover;
-  text-align: center;
-}
-html section.home > div:nth-child(3) > a,
-body section.home > div:nth-child(3) > a {
-  display: inline-block;
-  width: 3.61rem;
-  height: .98rem;
-  background: url('../images/h_btn.png') no-repeat;
-  background-size: cover;
-}
-html section.home > div:nth-child(4),
-body section.home > div:nth-child(4) {
-  width: 7.5rem;
-  background-color: #fff;
-}
 html section.choose,
 body section.choose {
   display: none;
