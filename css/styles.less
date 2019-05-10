@@ -1,0 +1,496 @@
+*{ 
+    touch-action: pan-y; 
+} 
+html,body{
+    // font-size: 58.5938px;
+        width: 100%;
+        background-color: #95d9fb;
+        height: 100%;
+        // 首页
+        section.home{
+            // display: none;
+            height: 100%;
+            >div{
+                &:nth-child(1){
+                    width: 7.5rem;
+                    height:3.2rem;
+                    background:url('../images/h_01.png') no-repeat;
+                    background-size: cover;
+                    position: relative; 
+                    >a{
+                        position: absolute;
+                        top: .3rem;
+                        right: .17rem;
+                        display: inline-block;
+                        width: 1.38rem;
+                        height: .4rem;
+                        border-radius: .2rem;
+                        background-color: #0088ef;
+                        line-height: .4rem;
+                        text-align: center;
+                        color: #fff;
+                        font-size: .24rem;
+                    } 
+                }
+                &:nth-child(2){
+                    width: 7.5rem;
+                    height:7rem;
+                    background:url('../images/h_02.png') no-repeat;
+                    background-size: cover; 
+                    position: relative; 
+                    >p{
+                        &:nth-child(1){
+                            position: absolute;
+                            right: 1.08rem;
+                            top: .03rem;
+                            width: 2.51rem;
+                            height: 1.05rem;
+                            background: url('../images/h_talk_01.png') no-repeat;
+                            background-size: cover;
+                        }
+                        &:nth-child(2){
+                            position: absolute;
+                            right:.8rem;
+                            top: .82rem;
+                            width: .92rem;
+                            height:.65rem;
+                            background: url('../images/h_talk_02.png') no-repeat;
+                            background-size: cover;
+                        }
+                        &:nth-child(3){
+                            position: absolute;
+                            right:.62rem;
+                            top:1.57rem;
+                            width:1.41rem;
+                            height:.7rem;
+                            background: url('../images/h_talk_03.png') no-repeat;
+                            background-size: cover;
+                        }
+                        &:nth-child(4){
+                            position: absolute;
+                            right:1.46rem;
+                            top:2.66rem;
+                            width:1.34rem;
+                            height:.61rem;
+                            background: url('../images/h_talk_04.png') no-repeat;
+                            background-size: cover;
+                        }
+                        &:nth-child(5){
+                            position: absolute;
+                            right:.18rem;
+                            top:3.27rem;
+                            width:2.92rem;
+                            height:.91rem;
+                            background: url('../images/h_talk_05.png') no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    width: 7.5rem;
+                    height:3.14rem;
+                    background:url('../images/h_03.png') no-repeat;
+                    background-size: cover; 
+                    text-align: center;
+                    >a{
+                        margin-top: .05rem;
+                        display: inline-block;
+                        width:3.61rem;
+                        height:.98rem;
+                        background: url('../images/h_btn.png') no-repeat;
+                        background-size: cover;
+                    } 
+                }
+                &:nth-child(4){
+                    width: 7.5rem;
+                    background-color: #fff;
+                }
+            }
+        }
+        // 选择部分
+        section.choose{
+            display: none;
+            text-align: center;
+            >ul{
+                width: 6.5rem;
+                height:6.5rem;
+                border: solid 1px red;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 auto;
+                >li{
+                    width: 2rem;
+                    height: 2rem;
+                    border: solid 1px rgb(53, 42, 42);
+                    box-sizing: border-box;
+                    position: relative;
+                    >div{
+                        width: 1.8rem;
+                        height: 1.8rem; 
+                        background-color: #2eb4cc;
+                    }
+                    >input{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            >a{
+                display: inline-block;
+                width: 2.8rem;
+                height: .8rem;
+                line-height: .8rem;
+                text-align: center;
+                background-color: #ff746b;
+                font-size: .26rem;
+                color: #333;
+                margin: 0.1rem auto;
+            }
+            &.choose_02{
+                display: none;
+                >ul{
+                    width: 6.5rem;
+                    height:6.5rem;
+                    border: solid 1px red;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    >li{
+                        width: 2rem;
+                        height: 2rem;
+                        border: solid 1px rgb(53, 42, 42);
+                        box-sizing: border-box;
+                        position: relative;
+                        >div{
+                            width: 1.8rem;
+                            height: 1.8rem; 
+                            background-color: pink;
+                        }
+                        >input{
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            &.choose_03{
+                display: none;
+                >ul{
+                    width: 6.5rem;
+                    height:6.5rem;
+                    border: solid 1px red;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    >li{
+                        width: 2rem;
+                        height: 2rem;
+                        border: solid 1px rgb(53, 42, 42);
+                        box-sizing: border-box;
+                        position: relative;
+                        >div{
+                            width: 1.8rem;
+                            height: 1.8rem; 
+                            background-color: yellow;
+                        }
+                        >input{
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // 弹窗
+        section.pop{
+            position: fixed;
+            top: 1.13rem;
+            z-index: 200;
+            left: 0;
+            right: 0;
+            margin: auto;
+            // 本网弹窗
+            &.tc_1{
+                display: none;
+                >div{
+                    width: 5rem;
+                    height: 6rem;
+                    margin: 0 auto;
+                    text-align: center;
+                    background-color: aliceblue;
+                    >a{
+                        display: inline-block;
+                        width: 4.8rem;
+                        height: 1.34rem;
+                        background-color: rgb(189, 28, 28);
+                        // background: url(../images/cm_10GB.gif) center no-repeat;
+                        // background-size: cover;
+                    }
+                }
+                >a{
+                    display: inline-block;
+                    margin: .5rem auto 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.86rem;
+                    height: .8rem;
+                    font-size: .32rem;
+                    color: #e4ceae;
+                    background-color: #264ba0;
+                    border-radius: .65rem;
+                }
+            }
+            // 异网弹窗1
+            &.tc_2{
+                display: none;
+                >div{
+                    margin: 0 auto;
+                    &:nth-child(1){
+                        background-color:#264ba0;
+                        font-size: .3rem;
+                        box-sizing: border-box;
+                        padding: .1rem;  
+                        width: 5.5rem;
+                        height: 4.38rem;
+                    }
+                    &:nth-child(2){
+                        width: 5.5rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: .3rem auto 0;
+                        >a{
+                            display: inline-block;
+                            width: 2.56rem;
+                            height: .8rem;
+                            box-sizing: border-box;
+                            font-size: .32rem;
+                            text-align: center;
+                            border-radius: .65rem;
+                            &:nth-child(1){
+                                background-color: #264ba0;
+                                background-color: #e1c9a6;
+                                color: #264ba0;
+                                line-height: .8rem;
+                            }   
+                            &:nth-child(2){
+                                background-color: #264ba0;
+                                color: #e1c9a6;
+                                line-height: .8rem;
+                                
+                            }             
+                        }
+                    }
+                }
+            }
+            // 异网弹窗2
+            &.tc_3{
+                display: none;
+                >div{
+                    margin: 0 auto;
+                    font-size: .28rem;
+                    box-sizing: border-box;
+                    width: 5.62rem;
+                    height: 4.39rem;
+                    // background: url('../images/tc_yi_01.png') no-repeat;
+                    // background-size: cover;
+                    background-color: #264ba0;
+                    padding: .77rem 0 .99rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        >input{
+                            width: 2.61rem;
+                            height: .52rem;
+                            border: solid 1px #000;
+                            background-color:#ff746b;
+                            box-sizing: border-box;
+                            padding-left: .1rem;
+                            display: flex;
+                            align-items: center;
+                            border-radius: .26rem;
+                            margin-left: .1rem;
+                        }
+                    }
+                    >p{
+                        &:nth-child(3){
+                            font-size: .24rem;
+                        }
+                    }
+                    
+                }
+                >a{
+                    display: inline-block;
+                    margin: .5rem auto 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 3.01rem;
+                    height: .83rem;
+                    font-size: .26rem;
+                    background-color: #ffb794;
+                    border-radius: .65rem;
+                    border: solid 1px #000;
+                    box-sizing: border-box;
+                    color: #000;
+                }
+            }
+            // 异网弹窗3
+            &.tc_4{
+                display: none;
+                >div{
+                    margin: 0 auto;
+                    &:nth-child(1){
+                        font-size: .28rem;
+                        box-sizing: border-box;
+                        padding: .1rem;  
+                        width: 5.62rem;
+                        height: 4.88rem;
+                        // background: url('../images/tc_yi_03.png') no-repeat;
+                        // background-size: cover;
+                        background-color: #264ba0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        >p{
+                            &:nth-child(2){
+                                >span{
+                                    color:#cc2e38; 
+                                }
+                               
+                            }
+                            &:nth-child(4){
+                                color:#cc2e38;
+                            }
+                            &:nth-child(5){
+                               margin-top: .2rem;
+                               font-size: .24rem;
+                            }
+                            &:nth-child(6){
+                                font-size: .24rem;
+                             }
+                        }
+                    }
+                    &:nth-child(2){
+                        width: 5.5rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: .3rem auto 0;
+                        >a{
+                            display: inline-block;
+                            width: 2.5rem;
+                            height: .82rem;
+                            box-sizing: border-box;
+                            font-size: .26rem;
+                            text-align: center;
+                            border-radius: .415rem;
+                            color: #000;
+                            border: solid 1px #000;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &:nth-child(1){
+                                background-color: #ff746b;
+                            }   
+                            &:nth-child(2){
+                                background-color: #ffb794;
+                            }             
+                        }
+                    }
+                }
+            }
+            // 异网弹窗4
+            &.tc_5{
+                display: none;
+                >div{
+                    width: 5.62rem;
+                    height: 5.89rem;
+                    margin: 0 auto;
+                    text-align: center;
+                    // background: url('../images/tc_last.png') no-repeat;
+                    // background-size: cover;
+                    background-color: #264ba0;
+                    box-sizing: border-box;
+                    padding: .77rem 0 .52rem;
+                    font-size: .24rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    >p{
+                        &:nth-child(1){
+                            font-size: .28rem;
+                            >span{
+                                color: #cc2e38;
+                            }
+                        }
+                        &:nth-child(2){
+                            font-size: .28rem;
+                        }
+                        &:nth-child(3){
+                            font-size: .28rem;
+                            >span{
+                                color: #cc2e38;
+                            }
+                            
+                        }
+                        &:nth-child(4){
+                           margin-top: .2rem;
+                        }
+                    }
+                    >a{
+                        display: inline-block;
+                        width: 4.8rem;
+                        height: 1.34rem;
+                        background-color: rgb(189, 28, 28);
+                        margin: .51rem auto 0;
+                        // background: url(../images/cm_10GB.gif) center no-repeat;
+                        // background-size: cover;
+                    }
+                }
+                >a{
+                    display: inline-block;
+                    margin: .5rem auto 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 3.01rem;
+                    height: .83rem;
+                    font-size: .26rem;
+                    background-color: #ffb794;
+                    border-radius: .65rem;
+                    border: solid 1px #000;
+                    box-sizing: border-box;
+                    color: #000;
+                }
+            }
+        }
+        
+        /* 遮罩层 */
+        section.mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.8);
+            z-index: 100;
+        }
+}
+
+             
