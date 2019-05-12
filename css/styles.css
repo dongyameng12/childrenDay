@@ -561,6 +561,61 @@ body section.share > div {
   background: url('../images/share_01.png') no-repeat;
   background-size: cover;
 }
+html section.tc_rule,
+body section.tc_rule {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 7.5rem;
+  height: 12.06rem;
+  background: url('../images/bg.png') no-repeat;
+  background-size: cover;
+}
+html section.tc_rule > div,
+body section.tc_rule > div {
+  margin: 0 auto;
+}
+html section.tc_rule > div:nth-child(1),
+body section.tc_rule > div:nth-child(1) {
+  width: 5.48rem;
+  height: 2.64rem;
+  background: url('../images/rule_01.png') no-repeat;
+  background-size: cover;
+}
+html section.tc_rule > div:nth-child(2),
+body section.tc_rule > div:nth-child(2) {
+  width: 5.32rem;
+  height: 6.32rem;
+  background: url('../images/rule_02.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html section.tc_rule > div:nth-child(2) > ul,
+body section.tc_rule > div:nth-child(2) > ul {
+  width: 4.83rem;
+  height: 5.83rem;
+  overflow-y: scroll;
+  font-size: .28rem;
+}
+html section.tc_rule > div:nth-child(2) > ul > li,
+body section.tc_rule > div:nth-child(2) > ul > li {
+  text-align: justify;
+  line-height: .5rem;
+}
+html section.tc_rule > a,
+body section.tc_rule > a {
+  display: flex;
+  justify-content: center;
+  width: 2.44rem;
+  height: .94rem;
+  background: url('../images/tc_btn.png') no-repeat;
+  background-size: cover;
+  margin: .62rem auto 0;
+}
 html section.binded,
 body section.binded {
   display: none;
@@ -578,54 +633,6 @@ body section.pop {
   left: 0;
   right: 0;
   margin: auto;
-}
-html section.pop.tc_rule,
-body section.pop.tc_rule {
-  display: none;
-  top: .64rem;
-}
-html section.pop.tc_rule > div,
-body section.pop.tc_rule > div {
-  margin: 0 auto;
-}
-html section.pop.tc_rule > div:nth-child(1),
-body section.pop.tc_rule > div:nth-child(1) {
-  width: 5.48rem;
-  height: 2.64rem;
-  background: url('../images/rule_01.png') no-repeat;
-  background-size: cover;
-}
-html section.pop.tc_rule > div:nth-child(2),
-body section.pop.tc_rule > div:nth-child(2) {
-  width: 5.32rem;
-  height: 6.32rem;
-  background: url('../images/rule_02.png') no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-html section.pop.tc_rule > div:nth-child(2) > ul,
-body section.pop.tc_rule > div:nth-child(2) > ul {
-  width: 4.83rem;
-  height: 5.83rem;
-  overflow-y: scroll;
-  font-size: .28rem;
-}
-html section.pop.tc_rule > div:nth-child(2) > ul > li,
-body section.pop.tc_rule > div:nth-child(2) > ul > li {
-  text-align: justify;
-  line-height: .5rem;
-}
-html section.pop.tc_rule > a,
-body section.pop.tc_rule > a {
-  display: flex;
-  justify-content: center;
-  width: 2.44rem;
-  height: .94rem;
-  background: url('../images/tc_btn.png') no-repeat;
-  background-size: cover;
-  margin: .62rem auto 0;
 }
 html section.pop.tc_1,
 body section.pop.tc_1 {

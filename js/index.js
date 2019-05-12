@@ -69,7 +69,6 @@ $(document).ready(function () {
     })
     // 活动规则
     $('.rule').on('click',function(){
-        showMask();
         $('.tc_rule').show();
     })
     // 判断关注，绑定等
