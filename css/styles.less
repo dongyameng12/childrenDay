@@ -4,16 +4,15 @@
 html,body{
     // font-size: 58.5938px;
         width: 100%;
-        background-color: #95d9fb;
+        background-color: #fff;
         height: 100%;
         // 首页
         section.home{
             // display: none;
-            height: 100%;
             >div{
                 &:nth-child(1){
                     width: 7.5rem;
-                    height:3.2rem;
+                    height:3.4rem;
                     background:url('../images/h_01.png') no-repeat;
                     background-size: cover;
                     position: relative; 
@@ -34,7 +33,7 @@ html,body{
                 }
                 &:nth-child(2){
                     width: 7.5rem;
-                    height:7rem;
+                    height:6.82rem;
                     background:url('../images/h_02.png') no-repeat;
                     background-size: cover; 
                     position: relative; 
@@ -88,8 +87,8 @@ html,body{
                 }
                 &:nth-child(3){
                     width: 7.5rem;
-                    height:1.86rem;
-                    background:url('../images/h_03_03.png') no-repeat;
+                    height:1.84rem;
+                    background:url('../images/h_03.png') no-repeat;
                     background-size: cover; 
                     text-align: center;
                     >a{
@@ -100,116 +99,654 @@ html,body{
                         background-size: cover;
                     } 
                 }
-                &:nth-child(4){
-                    width: 7.5rem;
-                    background-color: #fff;
-                }
             }
         }
-        // 选择部分
+        // 场景
         section.choose{
-            display: none;
-            text-align: center;
-            >ul{
-                width: 6.5rem;
-                height:6.5rem;
-                border: solid 1px red;
-                box-sizing: border-box;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                margin: 0 auto;
-                >li{
-                    width: 2rem;
-                    height: 2rem;
-                    border: solid 1px rgb(53, 42, 42);
+            width: 7.5rem;
+            height: 12.06rem;
+            background: url('../images/bg.png') no-repeat;
+            background-size: cover; 
+            >div{
+                &:nth-child(1){
+                    height: 3.6rem;
+                    padding-top: .54rem;
                     box-sizing: border-box;
-                    position: relative;
-                    >div{
-                        width: 1.8rem;
-                        height: 1.8rem; 
-                        background-color: #2eb4cc;
+                    text-align: center;
+                  >p{
+                      &:nth-child(2){
+                          font-size: .28rem;
+                          color: #ff4a45;
+                      }
+                  }
+                }
+                &:nth-child(2){
+                  width: 7.5rem;
+                  height: 6.10rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  >ul{
+                    width: 5.8rem;
+                    height: 4.8rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    >li{
+                        width: 1.9rem;
+                        height: 2.4rem;
+                        position: relative;
+                        >div{
+                            &:nth-child(2){
+                                width: .3rem;
+                                height: .3rem;
+                                border: solid 1px #131617;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                position: absolute;
+                                right: 0;
+                                top: -.1rem;
+                                box-sizing: border-box;
+                                >span{
+                                    &.cheacked{
+                                        position: absolute;
+                                        left: -.04rem;
+                                        top: -.07rem;
+                                        display: inline-block;
+                                        background: url('../images/cheacked.png') no-repeat;
+                                        background-size: cover;
+                                        width: .41rem;
+                                        height: .27rem;
+                                    }
+                                    
+                                }
+                            }
+                           
+                        }
                     }
-                    >input{
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
+                  }
+                }
+                &:nth-child(3){
+                    font-size: .28rem;
+                    color: #0088ef;
+                    text-align: center;
+                }
+            }
+            // 动漫
+            &.choose_01{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        >p{
+                            &:nth-child(1){
+                                width:5.69rem;
+                                height:2.64rem;
+                                background: url('../images/anima_title.png') no-repeat;
+                                background-size: cover;  
+                                margin: 0 auto; 
+                            }
+                        }
+                        
+                    }
+                }
+                .choose_content{
+                    >ul{
+                        >li{
+                            >div{
+                                &:nth-child(1){
+                                    width: 1.80rem;
+                                    height: 2.3rem;
+                                    background: url('../images/pic_anima.png') no-repeat;
+                                    background-size: cover;
+                                    border-radius: .2rem;
+                                }
+                               
+                            }
+                            &:nth-child(1){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: 0 0;
+                                        background-color: #ed8b7a;
+                                    }
+                                  
+                                }
+                            }
+                            &:nth-child(2){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -1.80rem 0;
+                                        background-color: #bc567a;
+                                    }
+                                    
+                                }
+                            }
+                            &:nth-child(3){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -3.60rem 0;
+                                        background-color: #56bcb8;
+                                    }
+                                 
+                                }
+                            }
+                            &:nth-child(4){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -5.40rem 0;
+                                        background-color: #4b7ebd;
+                                    }
+                                   
+                                }
+                            }
+                            &:nth-child(5){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -7.20rem 0;
+                                        background-color: #fcca74;    
+                                    }
+                                   
+                                }
+                            }
+                            &:nth-child(6){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -9rem 0;
+                                        background-color: #32c4df;
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 零食
+            &.choose_02{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        >p{
+                            &:nth-child(1){
+                                width:5.69rem;
+                                height:2.64rem;
+                                background: url('../images/snack_title.png') no-repeat;
+                                background-size: cover;  
+                                margin: 0 auto; 
+                            }
+                        }
+                        
+                    }
+                }
+                .choose_content{
+                    >ul{
+                        >li{
+                            >div{
+                                &:nth-child(1){
+                                    width: 1.80rem;
+                                    height: 2.3rem;
+                                    background: url('../images/pic_sanck.png') no-repeat;
+                                    background-size: cover;
+                                    border-radius: .2rem;
+                                }
+                              
+                            }
+                            &:nth-child(1){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: 0 0;
+                                        background-color: #fcca74;
+                                    }
+                                    
+                                }
+                            }
+                            &:nth-child(2){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -1.80rem 0;
+                                        background-color: #bc567a;
+                                    }
+                                  
+                                }
+                            }
+                            &:nth-child(3){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -3.60rem 0;
+                                        background-color: #32c4df;
+                                    }
+                                   
+                                }
+                            }
+                            &:nth-child(4){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -5.40rem 0;
+                                        background-color: #ed8b7a;
+                                    }
+                                  
+                                }
+                            }
+                            &:nth-child(5){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -7.20rem 0;
+                                        background-color: #56bcb8;
+                                    }
+                                }
+                            }
+                            &:nth-child(6){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -9rem 0;
+                                        background-color: #4b7ebd;
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 游戏
+            &.choose_03{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        >p{
+                            &:nth-child(1){
+                                width:5.69rem;
+                                height:2.64rem;
+                                background: url('../images/game_title.png') no-repeat;
+                                background-size: cover;  
+                                margin: 0 auto; 
+                            }
+                        }
+                        
+                    }
+                }
+                .choose_content{
+                    >ul{
+                        >li{
+                            >div{
+                                &:nth-child(1){
+                                    width: 1.80rem;
+                                    height: 2.3rem;
+                                    background: url('../images/pic_game.png') no-repeat;
+                                    background-size: cover;
+                                    border-radius: .2rem;
+                                }
+                            }
+                            &:nth-child(1){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: 0 0;
+                                        background-color: #4b7ebd;
+                                      }
+                                  }
+                            }
+                            &:nth-child(2){
+                                  >div{
+                                    &:nth-child(1){
+                                        background-position: -1.80rem 0;
+                                        background-color: #56bcb8;       
+                                    }
+                                  }
+                            }
+                            &:nth-child(3){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -3.60rem 0;
+                                        background-color: #32c4df;
+                                      }
+                                  }
+                            }
+                            &:nth-child(4){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -5.40rem 0;
+                                        background-color: #fcca74;
+                                      }
+                                   
+                                  }
+                            }
+                            &:nth-child(5){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -7.20rem 0;
+                                        background-color: #bc567a;
+                                      }
+                                      
+                                  }
+                            }
+                            &:nth-child(6){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -9rem 0;
+                                        background-color: #ed8b7a;    
+                                    }
+                                     
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 时间
+            &.choose_04{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        >p{
+                            &:nth-child(1){
+                                width:5.69rem;
+                                height:2.64rem;
+                                // background: url('../images/game_title.png') no-repeat;
+                                // background-size: cover;
+                                margin: 0 auto; 
+                            }
+                        }
+                        
+                    }
+                }
+                .choose_content{
+                    >ul{
+                        >li{
+                            >div{
+                                &:nth-child(1){
+                                    width: 1.80rem;
+                                    height: 2.3rem;
+                                    // background: url('../images/pic_game.png') no-repeat;
+                                    background-size: cover;
+                                    border-radius: .2rem;
+                                }
+                            }
+                            &:nth-child(1){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: 0 0;
+                                        background-color: #4b7ebd;
+                                      }
+                                  }
+                            }
+                            &:nth-child(2){
+                                  >div{
+                                    &:nth-child(1){
+                                        background-position: -1.80rem 0;
+                                        background-color: #56bcb8;       
+                                    }
+                                  }
+                            }
+                            &:nth-child(3){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -3.60rem 0;
+                                        background-color: #32c4df;
+                                      }
+                                  }
+                            }
+                            &:nth-child(4){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -5.40rem 0;
+                                        background-color: #fcca74;
+                                      }
+                                   
+                                  }
+                            }
+                            &:nth-child(5){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -7.20rem 0;
+                                        background-color: #bc567a;
+                                      }
+                                      
+                                  }
+                            }
+                            &:nth-child(6){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -9rem 0;
+                                        background-color: #ed8b7a;    
+                                    }
+                                     
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 最亮的仔
+            &.choose_05{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        >p{
+                            &:nth-child(1){
+                                width:5.69rem;
+                                height:2.64rem;
+                                // background: url('../images/game_title.png') no-repeat;
+                                // background-size: cover;
+                                margin: 0 auto; 
+                            }
+                        }
+                        
+                    }
+                }
+                .choose_content{
+                    >ul{
+                        >li{
+                            >div{
+                                &:nth-child(1){
+                                    width: 1.80rem;
+                                    height: 2.3rem;
+                                    // background: url('../images/pic_game.png') no-repeat;
+                                    background-size: cover;
+                                    border-radius: .2rem;
+                                }
+                            }
+                            &:nth-child(1){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: 0 0;
+                                        background-color: #4b7ebd;
+                                      }
+                                  }
+                            }
+                            &:nth-child(2){
+                                  >div{
+                                    &:nth-child(1){
+                                        background-position: -1.80rem 0;
+                                        background-color: #56bcb8;       
+                                    }
+                                  }
+                            }
+                            &:nth-child(3){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -3.60rem 0;
+                                        background-color: #32c4df;
+                                      }
+                                  }
+                            }
+                            &:nth-child(4){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -5.40rem 0;
+                                        background-color: #fcca74;
+                                      }
+                                   
+                                  }
+                            }
+                            &:nth-child(5){
+                                  >div{
+                                      &:nth-child(1){
+                                        background-position: -7.20rem 0;
+                                        background-color: #bc567a;
+                                      }
+                                      
+                                  }
+                            }
+                            &:nth-child(6){
+                                >div{
+                                    &:nth-child(1){
+                                        background-position: -9rem 0;
+                                        background-color: #ed8b7a;    
+                                    }
+                                     
+                                }
+                            }
+                        }
                     }
                 }
             }
             >a{
-                display: inline-block;
-                width: 2.8rem;
-                height: .8rem;
-                line-height: .8rem;
-                text-align: center;
-                background-color: #ff746b;
-                font-size: .26rem;
-                color: #333;
-                margin: 0.1rem auto;
-            }
-            &.choose_02{
-                display: none;
-                >ul{
-                    width: 6.5rem;
-                    height:6.5rem;
-                    border: solid 1px red;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    >li{
-                        width: 2rem;
-                        height: 2rem;
-                        border: solid 1px rgb(53, 42, 42);
-                        box-sizing: border-box;
-                        position: relative;
-                        >div{
-                            width: 1.8rem;
-                            height: 1.8rem; 
-                            background-color: pink;
-                        }
-                        >input{
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                        }
-                    }
-                }
-            }
-            &.choose_03{
-                display: none;
-                >ul{
-                    width: 6.5rem;
-                    height:6.5rem;
-                    border: solid 1px red;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    >li{
-                        width: 2rem;
-                        height: 2rem;
-                        border: solid 1px rgb(53, 42, 42);
-                        box-sizing: border-box;
-                        position: relative;
-                        >div{
-                            width: 1.8rem;
-                            height: 1.8rem; 
-                            background-color: yellow;
-                        }
-                        >input{
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                        }
-                    }
-                }
+                display: flex;
+                justify-content: center;
+                 width: 2.93rem;
+                 height: .82rem;
+                 background: url('../images/next.png') no-repeat;
+                 background-size: cover;
+                 margin: .35rem auto 0;
             }
         }
-        
+        // 主页
+        section.main{
+            display: none;
+            width: 7.5rem;
+            height: 12.06rem;
+            background: url('../images/bg.png') no-repeat;
+            background-size: cover; 
+            >div{
+                &:nth-child(1){
+                    width: 7.50rem;
+                    height:5.14rem;
+                    background: url('../images/main_01.png') no-repeat;
+                    background-size: cover;
+                    position: relative; 
+                    >a{
+                        position: absolute;
+                        top: .3rem;
+                        right: .17rem;
+                        display: inline-block;
+                        width: 1.38rem;
+                        height: .4rem;
+                        border-radius: .2rem;
+                        background-color: #0088ef;
+                        line-height: .4rem;
+                        text-align: center;
+                        color: #fff;
+                        font-size: .24rem;
+                    }
+                    >div{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        bottom: .74rem;
+                        width: 2.4rem;
+                        height: 1rem;
+                        color: #b8592a;
+                        font-size: .29rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        font-weight: bolder;
+                    }
+
+                }
+                &:nth-child(2){
+                    width: 5.8rem;
+                    height: 4.84rem;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    >div{
+                        width: 2.45rem;
+                        height: 3.75rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:nth-child(1){
+                            >p{
+                                width: 1.34rem;
+                                height:2.46rem;
+                                background: url('../images/main_02.png') no-repeat;
+                                background-size: cover; 
+                            }
+                            >a{
+                                display: inline-block;
+                                &.unling_left{
+                                    width: 2.44rem;
+                                    height:.94rem;
+                                    background: url('../images/main_unbtn1.png') no-repeat;
+                                    background-size: cover;  
+                                }
+                            }
+
+                        }
+                        &:nth-child(2){
+                            >p{
+                                width: 2.62rem;
+                                height:2.46rem;
+                                background: url('../images/main_03.png') no-repeat;
+                                background-size: cover; 
+                            }
+                            >a{
+                                display: inline-block;
+                                &.unling_right{
+                                    width: 2.44rem;
+                                    height:.94rem;
+                                    background: url('../images/main_unbtn2.png') no-repeat;
+                                    background-size: cover;  
+                                }
+                            }
+
+                        }
+                        // 查看按钮
+                        .allling{
+                            width: 2.45rem;
+                            height:.94rem;
+                            background: url('../images/main_yibtn.png') no-repeat;
+                            background-size: cover; 
+                        }
+                    }
+                }
+            }    
+        }
+        // 分享
+        section.share{
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width:7.5rem;
+            height: 100%;
+            background-color: #000;
+            opacity: .9;
+            >div{
+                position: absolute;
+                top: .33rem;
+                right: .54rem;
+                width:5.96rem;
+                height: 2.05rem;
+                background: url('../images/share_01.png') no-repeat;
+                background-size: cover;    
+            }
+        }
+        // 绑定手机
+        section.binded{
+            display: none;
+            width: 7.5rem;
+            height: 12.06rem;
+            background: url('../images/bg.png') no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
         // 弹窗
         section.pop{
             position: fixed;
@@ -218,36 +755,97 @@ html,body{
             left: 0;
             right: 0;
             margin: auto;
+            // 活动规则
+            &.tc_rule{
+                display: none;
+                top: .64rem;
+                >div{
+                    margin: 0 auto;
+                    &:nth-child(1){
+                        width: 5.48rem;
+                        height: 2.64rem;
+                        background: url('../images/rule_01.png') no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(2){
+                        width: 5.32rem;
+                        height:6.32rem;
+                        background: url('../images/rule_02.png') no-repeat;
+                        background-size: cover;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        >ul{
+                            width: 4.83rem;
+                            height: 5.83rem;
+                            overflow-y: scroll;
+                            font-size: .28rem;
+                            >li{
+                                text-align: justify;
+                                line-height: .5rem;
+                            }
+                        }
+                    }
+                }
+                >a{
+                    display: flex;
+                    justify-content: center;
+                    width: 2.44rem;
+                    height: .94rem;
+                    background: url('../images/tc_btn.png') no-repeat;
+                    background-size: cover;
+                    margin: .62rem auto 0;
+                } 
+            }
             // 本网弹窗
             &.tc_1{
                 display: none;
                 >div{
-                    width: 5rem;
-                    height: 6rem;
+                    width: 5.32rem;
+                    height: 5.5rem;
+                    background: url(../images/tc_02.png) center no-repeat;
+                    background-size: cover;
                     margin: 0 auto;
                     text-align: center;
-                    background-color: aliceblue;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-bottom: .21rem;
+                    font-size: .28rem;
+                    >p{
+                        &:nth-child(1),&:nth-child(2),&:nth-child(3){
+                            font-size: .3rem;
+                        }
+                        &:nth-child(2){
+                            color: #cc2e38;
+                        }
+                        &:nth-child(3){
+                            >span{
+                                color: #cc2e38;
+                            }
+                        }
+                        &:nth-child(4){
+                            margin-top: .34rem;
+                        }
+                    }
                     >a{
                         display: inline-block;
                         width: 4.8rem;
                         height: 1.34rem;
-                        background-color: rgb(189, 28, 28);
-                        // background: url(../images/cm_10GB.gif) center no-repeat;
-                        // background-size: cover;
+                        background-color: #0077ef;
+                        margin-top: .54rem;
                     }
                 }
                 >a{
-                    display: inline-block;
-                    margin: .5rem auto 0;
                     display: flex;
-                    align-items: center;
                     justify-content: center;
-                    width: 2.86rem;
-                    height: .8rem;
-                    font-size: .32rem;
-                    color: #e4ceae;
-                    background-color: #264ba0;
-                    border-radius: .65rem;
+                    width: 2.44rem;
+                    height: .94rem;
+                    background: url('../images/tc_btn.png') no-repeat;
+                    background-size: cover;
+                    margin: .62rem auto 0;
                 }
             }
             // 异网弹窗1
@@ -256,37 +854,42 @@ html,body{
                 >div{
                     margin: 0 auto;
                     &:nth-child(1){
-                        background-color:#264ba0;
-                        font-size: .3rem;
                         box-sizing: border-box;
-                        padding: .1rem;  
-                        width: 5.5rem;
-                        height: 4.38rem;
+                        padding: .4rem 0 .52rem 0;  
+                        width: 5.32rem;
+                        height: 3.81rem;
+                        background: url('../images/tc_01.png') no-repeat;
+                        background-size: cover;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        >p{
+                            &:nth-child(3){
+                                margin-top: .37rem;
+                            }
+                            &:nth-child(5){
+                                margin-top: .47rem;
+                                font-size: .28rem;
+                            }
+                        }
                     }
                     &:nth-child(2){
-                        width: 5.5rem;
+                        width: 5.32rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        margin: .3rem auto 0;
+                        margin: .7rem auto 0;
                         >a{
                             display: inline-block;
-                            width: 2.56rem;
-                            height: .8rem;
-                            box-sizing: border-box;
-                            font-size: .32rem;
-                            text-align: center;
-                            border-radius: .65rem;
+                            width: 2.44rem;
+                            height: .94rem;
                             &:nth-child(1){
-                                background-color: #264ba0;
-                                background-color: #e1c9a6;
-                                color: #264ba0;
-                                line-height: .8rem;
+                                background: url('../images/tc_btn_02.png') no-repeat;
+                                background-size: cover;
                             }   
                             &:nth-child(2){
-                                background-color: #264ba0;
-                                color: #e1c9a6;
-                                line-height: .8rem;
+                                background: url('../images/tc_btn_01.png') no-repeat;
+                                background-size: cover;
                                 
                             }             
                         }
@@ -297,27 +900,26 @@ html,body{
             &.tc_3{
                 display: none;
                 >div{
-                    margin: 0 auto;
-                    font-size: .28rem;
                     box-sizing: border-box;
-                    width: 5.62rem;
-                    height: 4.39rem;
-                    // background: url('../images/tc_yi_01.png') no-repeat;
-                    // background-size: cover;
-                    background-color: #264ba0;
-                    padding: .77rem 0 .99rem;
+                    width: 5.32rem;
+                    height: 3.81rem;
+                    background: url('../images/tc_01.png') no-repeat;
+                    background-size: cover;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    justify-content:center;
                     align-items: center;
+                    margin:0 auto;
+                    font-size: .3rem;
                     >div{
                         display: flex;
                         align-items: center;
+                        margin: .6rem auto;
                         >input{
                             width: 2.61rem;
                             height: .52rem;
-                            border: solid 1px #000;
-                            background-color:#ff746b;
+                            border: solid 1px #449bef;
+                            background-color:#ececd7;
                             box-sizing: border-box;
                             padding-left: .1rem;
                             display: flex;
@@ -328,25 +930,19 @@ html,body{
                     }
                     >p{
                         &:nth-child(3){
-                            font-size: .24rem;
+                            font-size: .28rem;
                         }
                     }
                     
                 }
                 >a{
-                    display: inline-block;
-                    margin: .5rem auto 0;
                     display: flex;
-                    align-items: center;
                     justify-content: center;
-                    width: 3.01rem;
-                    height: .83rem;
-                    font-size: .26rem;
-                    background-color: #ffb794;
-                    border-radius: .65rem;
-                    border: solid 1px #000;
-                    box-sizing: border-box;
-                    color: #000;
+                    width: 2.44rem;
+                    height: .94rem;
+                    background: url('../images/tc_btn.png') no-repeat;
+                    background-size: cover;
+                    margin: .62rem auto 0;
                 }
             }
             // 异网弹窗3
@@ -355,61 +951,56 @@ html,body{
                 >div{
                     margin: 0 auto;
                     &:nth-child(1){
-                        font-size: .28rem;
+                        width:1.77rem;
+                        height: .77rem;
+                        background: url('../images/tc_03.png') no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(2){
                         box-sizing: border-box;
-                        padding: .1rem;  
-                        width: 5.62rem;
-                        height: 4.88rem;
-                        // background: url('../images/tc_yi_03.png') no-repeat;
-                        // background-size: cover;
-                        background-color: #264ba0;
+                        padding: .4rem 0 .52rem 0;  
+                        width: 5.32rem;
+                        height: 3.81rem;
+                        background: url('../images/tc_01.png') no-repeat;
+                        background-size: cover;
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                        justify-content: flex-end;
+                        text-align: center;
+                        font-size: .3rem;
                         >p{
-                            &:nth-child(2){
+                            &:nth-child(2),&:nth-child(4){
                                 >span{
                                     color:#cc2e38; 
                                 }
                                
                             }
-                            &:nth-child(4){
-                                color:#cc2e38;
-                            }
                             &:nth-child(5){
-                               margin-top: .2rem;
-                               font-size: .24rem;
+                               margin-top: .64rem;
+                               font-size: .28rem;
                             }
                             &:nth-child(6){
-                                font-size: .24rem;
+                                font-size: .28rem;
                              }
                         }
                     }
-                    &:nth-child(2){
-                        width: 5.5rem;
+                    &:nth-child(3){
+                        width: 5.32rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        margin: .3rem auto 0;
+                        margin: .7rem auto 0;
                         >a{
                             display: inline-block;
-                            width: 2.5rem;
-                            height: .82rem;
-                            box-sizing: border-box;
-                            font-size: .26rem;
-                            text-align: center;
-                            border-radius: .415rem;
-                            color: #000;
-                            border: solid 1px #000;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            width: 2.44rem;
+                            height: .94rem;
                             &:nth-child(1){
-                                background-color: #ff746b;
+                                background: url('../images/tc_btn_03.png') no-repeat;
+                                background-size: cover;    
                             }   
                             &:nth-child(2){
-                                background-color: #ffb794;
+                                background: url('../images/tc_btn.png') no-repeat;
+                                background-size: cover;
                             }             
                         }
                     }
@@ -419,20 +1010,19 @@ html,body{
             &.tc_5{
                 display: none;
                 >div{
-                    width: 5.62rem;
-                    height: 5.89rem;
+                    width: 5.32rem;
+                    height: 5.5rem;
+                    background: url(../images/tc_02.png) center no-repeat;
+                    background-size: cover;
                     margin: 0 auto;
                     text-align: center;
-                    // background: url('../images/tc_last.png') no-repeat;
-                    // background-size: cover;
-                    background-color: #264ba0;
                     box-sizing: border-box;
-                    padding: .77rem 0 .52rem;
-                    font-size: .24rem;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
                     align-items: center;
+                    justify-content: flex-end;
+                    padding-bottom: .21rem;
+                    font-size: .28rem;
                     >p{
                         &:nth-child(1){
                             font-size: .28rem;
@@ -451,7 +1041,7 @@ html,body{
                             
                         }
                         &:nth-child(4){
-                           margin-top: .2rem;
+                           margin-top: .34rem;
                         }
                     }
                     >a{
@@ -459,25 +1049,19 @@ html,body{
                         width: 4.8rem;
                         height: 1.34rem;
                         background-color: rgb(189, 28, 28);
-                        margin: .51rem auto 0;
+                        margin: .37rem auto 0;
                         // background: url(../images/cm_10GB.gif) center no-repeat;
                         // background-size: cover;
                     }
                 }
                 >a{
-                    display: inline-block;
-                    margin: .5rem auto 0;
                     display: flex;
-                    align-items: center;
                     justify-content: center;
-                    width: 3.01rem;
-                    height: .83rem;
-                    font-size: .26rem;
-                    background-color: #ffb794;
-                    border-radius: .65rem;
-                    border: solid 1px #000;
-                    box-sizing: border-box;
-                    color: #000;
+                    width: 2.44rem;
+                    height: .94rem;
+                    background: url('../images/tc_btn.png') no-repeat;
+                    background-size: cover;
+                    margin: .62rem auto 0;
                 }
             }
         }
@@ -487,7 +1071,7 @@ html,body{
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0,0,0,.8);
+            background-color: rgba(0,0,0,.9);
             z-index: 100;
         }
 }

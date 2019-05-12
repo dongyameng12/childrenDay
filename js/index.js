@@ -24,31 +24,53 @@ $(document).ready(function () {
     var CM = true;
     //是否转增
     var increase;
+     // 已经选择
+     var  cheackArr = []
     // 领取奖励后当前class
     var current_clickclass
-    //点击下一页 
-    $('.next').on('click',function(namenext){
-        // 点击当前name属性值
-        var namenext = $(this).siblings('ul').children('li').children('input').attr('name');
-        var animeArr = [];
-        var items =$("input[name='"+namenext+"']");
-        for (i = 0; i < items.length; i++) {
-            if (items[i].checked) {
-                animeArr.push(items[i].value);
-            }
+    // 选择
+    $('.choose_content ul li').on('click',function(){
+        if ($(this).children('div:eq(1)').children('span').hasClass('cheacked')) {
+            $(this).children('div:eq(1)').children('span').removeClass('cheacked');
+        } else {
+            $(this).children('div:eq(1)').children('span').addClass('cheacked'); 
         }
-        if (animeArr.length !== 0) {
-            debugger
-            //选择之后，（向已经选择的next中添加allnext）
-            $(this).addClass('allnext');
-            if ($(this).hasClass('allnext')) {
-                //下一页
-                $(this).parent().hide()
-                $(this).parent().next().show(); 
+    })
+
+    //点击下一页 
+    $('.next').on('click',function(){
+        var _this = $(this)
+        var li_obj = _this.siblings('.choose_content').children('ul').children('li')
+        var i = 0
+        $.each(li_obj,function(index,item){
+            var status = $(this).children('div:eq(1)').children('span').hasClass('cheacked')
+            if (status) {
+                i++
+                return false;
+            }
+        })
+        if (i > 0) {
+            // 对的个数
+            // console.log(i)
+            var chose_obj = $(this).parents('.choose').hide().next('.choose')
+            if (chose_obj.length > 0) {
+                $(this).parents('.choose').hide().next('.choose').show()
+            } else {
+                $('.main').show();
             }
         } else {
-            alert('你还没选择')
-        } 
+            alert('没选择')
+        }
+    });
+    // 点击首页开始
+    $('#start_game').on('click',function(){
+        $('.home').hide();
+        $('.choose_01').show();
+    })
+    // 活动规则
+    $('.rule').on('click',function(){
+        showMask();
+        $('.tc_rule').show();
     })
     // 判断关注，绑定等
     function jiangli() {

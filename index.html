@@ -18,10 +18,11 @@
     <button style="position:absolute;z-index:300;top:.5rem;font-weight:bolder;" href="#" class="test2 clickios">没有关注公众号</button>
     <button style="position:absolute;z-index:300;top:1rem;font-weight:bolder;" href="#" class="test3 clickios">没有绑定用户</button>
     <button style="position:absolute;z-index:300;top:1.5rem;font-weight:bolder;" href="#" class="test4 clickios">异网用户</button>
-    
     <!-- 首页 -->
     <section class="home">
-        <div><a href="javascript:void(0);">活动规则</a></div>
+        <div>
+            <a href="javascript:void(0);" class="rule">活动规则</a>
+        </div>
         <div>
             <p></p>
             <p></p>
@@ -29,150 +30,253 @@
             <p></p>
             <p></p>
         </div>
-        <div><a href="javascript:void(0);"></a></div>
-        <div style="height: calc(100% - 12.06rem);"></div>
+        <div>
+            <a href="javascript:void(0);" id="start_game"></a>
+        </div>
     </section>
     <!-- 动画/动漫人物 -->
     <section class="choose choose_01">
-        <ul>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_01" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_02" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_03" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_04" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_05" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_06" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_07" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_08" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="anime_09" />
-            </li>
-        </ul>
-        <a href="javascript:void(0);" class="next">下一页</a>
-        <!-- 最后 -->
-        <!-- <a href="javascript:void(0);" id="checknum">审核资格</a> -->
-    </section>
-    <!-- 零食 snack-->
-    <section class="choose choose_02">
-        <ul>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_01" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_02" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_03" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_04" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_05" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_06" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_07" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="snack" value="snack_08" />
-            </li>
-            <li>
-                <div></div>
-                <input type="checkbox" name="anime" value="snack_09" />
-            </li>
-        </ul>
-        <a href="javascript:void(0);" class="next">下一页</a>
-    </section>
-    <!-- 3 -->
-    <section class="choose choose_03">
+        <div>
+            <p></p>
+            <p>在你认识的人物中画勾勾</p>
+        </div>
+        <div class="choose_content" id="persion_choose">
             <ul>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_01" />
+                    <div><span ></span></div>
                 </li>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_02" />
+                    <div><span></span></div>
                 </li>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_03" />
+                    <div><span></span></div>
                 </li>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_04" />
+                    <div><span></span></div>
                 </li>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_05" />
+                    <div><span></span></div>
                 </li>
                 <li>
                     <div></div>
-                    <input type="checkbox" name="toy" value="toy_06" />
-                </li>
-                <li>
-                    <div></div>
-                    <input type="checkbox" name="toy" value="toy_07" />
-                </li>
-                <li>
-                    <div></div>
-                    <input type="checkbox" name="toy" value="toy_08" />
-                </li>
-                <li>
-                    <div></div>
-                    <input type="checkbox" name="toy" value="toy_09" />
+                    <div><span></span></div> 
                 </li>
             </ul>
-            <a href="javascript:void(0);" class="next">下一页</a>
-        </section>
+        </div>
+        <div>可以多项选择哦</div>
+        <a href="javascript:void(0);" class="next"></a>
+    </section>
+    <!-- 零食 snack-->
+    <section class="choose choose_02">
+        <div>
+            <p></p>
+            <p>在你吃过的东西中画勾勾</p>
+        </div>
+        <div class="choose_content">
+            <ul>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+            </ul>
+        </div>
+        <div>可以多项选择哦</div>
+        <a href="javascript:void(0);" class="next"></a>
+    </section>
+    <!-- 游戏 -->
+    <section class="choose choose_03">
+        <div>
+            <p></p>
+            <p>在你玩过的玩具中画勾勾</p>
+        </div>
+        <div class="choose_content">
+            <ul>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+            </ul>
+        </div>
+        <div>可以多项选择哦</div>
+        <a href="javascript:void(0);" class="next"></a>
+    </section>
+    <!-- 时间流转 -->
+    <section class="choose choose_04">
+        <div>
+            <p></p>
+            <p>在你用过的物品中画勾勾</p>
+        </div>
+        <div class="choose_content">
+            <ul>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+            </ul>
+        </div>
+        <div>可以多项选择哦</div>
+        <a href="javascript:void(0);" class="next"></a>
+    </section>
+     <!-- 最亮的仔 -->
+    <section class="choose choose_05">
+        <div>
+            <p></p>
+            <p>在你穿过的东东中画勾勾</p>
+        </div>
+        <div class="choose_content">
+            <ul>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span> </div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+                <li>
+                    <div></div>
+                    <div><span></span></div>
+                </li>
+            </ul>
+        </div>
+        <div>可以多项选择哦</div>
+        <a href="javascript:void(0);" class="next"></a>
+    </section>
+    <!-- 主页 -->
+    <section class="main">
+        <div>
+            <a href="javascript:void(0);" class="rule">活动规则</a>
+            <div>
+                <p>今年再容你一年，</p>
+                <p>儿童节礼物拿去！</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p></p>
+                <a href="javascript:void(0);" class="unling_left"></a>
+            </div>
+            <div>
+                <p></p>
+                <a href="javascript:void(0);" class="unling_right"></a>
+            </div>
+        </div>
+    </section>
+    <!-- 分享 -->
+    <section class="share">
+        <div></div>
+    </section>
+    <!-- 绑定手机 -->
+    <section class="binded">
+        <h1 style="color:red;">绑定手机号</h1>
+    </section>
+    <!-- 活动规则 -->
+    <section class="pop tc_rule">
+        <div></div>
+        <div>
+            <ul>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                <li>活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="close"></a>
+    </section>
     <!-- 本网获得流量弹窗 -->
     <section class="pop tc_1">
         <div>
             <p>恭喜您的手机号</p>
             <p>xxxxxxxxxxx</p>
-            <p>获得
-                <span>500MB</span>全国流量</p>
+            <p>获得 <span>500MB</span>全国流量</p>
             <p>流量将于15日内到账</p>
             <p>有效期：7天</p>
             <p>（流量到账后，立即生效）</p>
             <a href="javascript:void(0);"></a>
         </div>
-        <a href="javascript:void(0);" class="close">确定</a>
+        <a href="javascript:void(0);" class="close"></a>
     </section>
     <!-- 异网流量弹窗 1-->
     <section class="pop tc_2">
@@ -185,8 +289,8 @@
             <p>（流量仅可在活动期间进行转赠）</p>
         </div>
         <div>
-            <a href="javascript:void(0);" class="close2">取消</a>
-            <a href="javascript:void(0);" id="giveBtn">转增</a>
+            <a href="javascript:void(0);" class="close2"></a>
+            <a href="javascript:void(0);" id="giveBtn"></a>
         </div>
     </section>
     <!-- 异网弹窗2 -->
@@ -199,17 +303,17 @@
             </div>
             <p>（流量仅可在活动期间进行转赠）</p>
         </div>
-        <a id="giveBtn_2" href="javascript:void(0)">确定</a>
+        <a id="giveBtn_2" href="javascript:void(0)"></a>
     </section>
     <!-- 异网弹窗3 -->
     <section class="pop tc_4" ->
+        <div></div>
         <div>
             <p>您是否将</p>
             <p>
                 <span> 500MB</span>全国流量 </p>
             <p>转赠到手机号码</p>
-            <p class="mobile"> xxxxxxxxxxx </p>
-            <p> 账户中</p>
+            <p class="mobile"><span>xxxxxxxxxxx </span> 账户中</p>
             <p>（流量仅可在活动期间进行转赠）</p>
         </div>
         <div>
@@ -230,7 +334,7 @@
             <p>（流量到账后，立即生效）</p>
             <a href="javascript:void(0);"></a>
         </div>
-        <a href="javascript:void(0);" class="close">确定</a>
+        <a href="javascript:void(0);" class="close"></a>
     </section>
     <!-- 遮罩层 -->
     <section class="mask" id="mask"></section>
