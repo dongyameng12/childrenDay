@@ -24,10 +24,13 @@ $(document).ready(function () {
     var CM = true;
     //是否转增
     var increase;
-     // 已经选择
-     var  cheackArr = []
-    // 领取奖励后当前class
-    var current_clickclass
+    // 当前按钮的class
+    var current_clickclass;
+    // 领奖时当前按钮显示的class
+    var current_change
+    // 是否分享(默认没分享)
+    var noShare = false;
+    var  cheackArr = []
     // 选择
     $('.choose_content ul li').on('click',function(){
         if ($(this).children('div:eq(1)').children('span').hasClass('cheacked')) {
@@ -59,7 +62,9 @@ $(document).ready(function () {
                 $('.main').show();
             }
         } else {
-            alert('没选择')
+            // alert('没选择')
+            showMask();
+            $('.tc_tishi').show();
         }
     });
     // 点击首页开始
@@ -67,9 +72,35 @@ $(document).ready(function () {
         $('.home').hide();
         $('.choose_01').show();
     })
+    //聊天气泡淡入    
     // 活动规则
     $('.rule').on('click',function(){
         $('.tc_rule').show();
+    })
+    // 点击主页的按钮
+    $('.lottery').on('click',function () {
+        // 左边
+        if ($(this).hasClass('main_left')) {
+            current_clickclass = '.main_left'
+            current_change = 'left'
+            jiangli();
+        }else if ($(this).hasClass('main_right')) {
+            // 右边
+            // 已经分享
+            if (noShare) {
+                current_clickclass = '.main_right'
+                current_change = 'right'
+                jiangli(); 
+            }else{
+                $('.share').show();
+            }
+          
+        }
+    })
+    // 分享（测试用）
+    $('.share').on('click',function(){
+        $('.share').hide();
+        noShare = true;
     })
     // 判断关注，绑定等
     function jiangli() {
@@ -82,21 +113,19 @@ $(document).ready(function () {
                     $('.tc_1').show();
                 } else {
                     //异网中流量 
-                    // if ($(current_clickclass).text() == '查看奖励') {
-                    //     // alert('查看奖励')
-                    //     showMask();
-                    //     $('.tc_5').show();
-                    // } else {
-                    //     showMask();
-                    //     $('.tc_2').show();
-                    // }
-                    $('.tc_5').show();
+                    if ($(current_clickclass).hasClass('allling')) {
+                        // alert('查看奖励')
+                        showMask();
+                        $('.tc_5').show();
+                    } else {
+                        showMask();
+                        $('.tc_2').show();
+                    }
                 }
             } else {
-                // $('.main').hide();
-                // $('.bind').show();
-                // 未绑定手机号
-                alert('你还没绑定手机号');
+                 // 未绑定手机号
+                $('.main').hide();
+                $('.binded').show();
             }
         } else {
             // 未关注
@@ -150,12 +179,15 @@ $(document).ready(function () {
         $('.tc_4').hide();
         $('.tc_5').show();
     });
-    //关闭
+    //关闭(中奖)
     $('.close').on('click', function () {
         // 获取奖励的最后一步
-        // $(current_clickclass).parent('div').children('div:eq(0)').removeClass(current_lihe + 'no').addClass(current_lihe + 'yes');
-        // $(current_clickclass).css('background-color', '#ff746b');
-        // $(current_clickclass).text('点击查看');
+        $(current_clickclass).removeClass('unling_'+current_change).addClass('allling');
+        $(this).parent().hide();
+        hideMask();
+    });
+     //关闭
+     $('.close3').on('click', function () {
         $(this).parent().hide();
         hideMask();
     });
@@ -197,3 +229,52 @@ function hideMask() {
     $("#mask").hide();
     $('body').css('position', 'unset');
 }
+
+// 淡出执行一次
+function inoutOne () {
+    // $("#talk_01").fadeIn(1000,function () {
+    //     $("#talk_02").fadeIn(1000,function () {
+    //         $("#talk_03").fadeIn(1000,function () {
+    //             $("#talk_04").fadeIn(1000,function () {
+    //                 $("#talk_05").fadeIn(1000);
+    //             });
+    //         });
+    //     });
+    // })
+    $("#talk_0"+i).fadeIn(1000,function () {
+        if (i < 5) {
+            i++
+            return inoutOne()
+        } 
+    })
+}
+
+// 一直淡入淡出1
+var i = 1
+function inoutAuto () {
+    $("#talk_0"+i).fadeIn(1000,function () {
+        if (i < 5) {
+            i++
+            return inoutAuto()
+        } else {
+            inoutTwo()
+        }
+    })
+}
+
+function inoutTwo () {
+    $("#talk_0"+i).fadeOut(1000,function () {
+        if (i > 1) {
+            i--
+            return inoutTwo()
+        } else {
+            inoutAuto()
+        }
+    })
+}
+
+
+
+
+
+

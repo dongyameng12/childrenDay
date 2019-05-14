@@ -8,6 +8,53 @@ body {
   height: 100%;
   /* 遮罩层 */
 }
+html section.loader,
+body section.loader {
+  width: 100%;
+  min-height: 100%;
+  background: -webkit-linear-gradient(#96dafb, #fff);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#96dafb, #fff);
+  /* Opera 11.6 - 12.0 */
+  background: -moz-linear-gradient(#96dafb, #fff);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#96dafb, #fff);
+  /* 标准的语法 */
+}
+html section.loader > div,
+body section.loader > div {
+  padding-top: 50%;
+}
+html section.loader > div:nth-child(1),
+body section.loader > div:nth-child(1) {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+}
+html section.loader > div:nth-child(2),
+body section.loader > div:nth-child(2) {
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 0 auto;
+  width: 15em;
+  height: .5em;
+  background-color: #fff;
+  border-radius: .4em;
+}
+html section.loader > div:nth-child(2) div,
+body section.loader > div:nth-child(2) div {
+  width: 30%;
+  height: .24em;
+  border-radius: .4em;
+  background-color: #61bce9;
+}
+html section.home,
+body section.home {
+  display: none;
+}
 html section.home > div:nth-child(1),
 body section.home > div:nth-child(1) {
   width: 7.5rem;
@@ -38,6 +85,10 @@ body section.home > div:nth-child(2) {
   background: url('../images/h_02.png') no-repeat;
   background-size: cover;
   position: relative;
+}
+html section.home > div:nth-child(2) > p,
+body section.home > div:nth-child(2) > p {
+  display: none;
 }
 html section.home > div:nth-child(2) > p:nth-child(1),
 body section.home > div:nth-child(2) > p:nth-child(1) {
@@ -530,6 +581,13 @@ body section.main > div:nth-child(2) > div:nth-child(2) > a.unling_right {
   height: .94rem;
   background: url('../images/main_unbtn2.png') no-repeat;
   background-size: cover;
+  animation: mymove 1.5s infinite;
+  -webkit-animation: mymove 1.5s infinite;
+  /*Safari and Chrome*/
+  animation-direction: alternate;
+  /*轮流反向播放动画。*/
+  animation-timing-function: ease-in-out;
+  /*动画的速度曲线*/
 }
 html section.main > div:nth-child(2) > div .allling,
 body section.main > div:nth-child(2) > div .allling {
@@ -550,6 +608,7 @@ body section.share {
   height: 100%;
   background-color: #000;
   opacity: .9;
+  z-index: 200;
 }
 html section.share > div,
 body section.share > div {
@@ -572,6 +631,7 @@ body section.tc_rule {
   height: 12.06rem;
   background: url('../images/bg.png') no-repeat;
   background-size: cover;
+  z-index: 200;
 }
 html section.tc_rule > div,
 body section.tc_rule > div {
@@ -711,10 +771,20 @@ body section.pop.tc_2 > div:nth-child(1) {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+  font-size: .3rem;
+}
+html section.pop.tc_2 > div:nth-child(1) > p:nth-child(2),
+body section.pop.tc_2 > div:nth-child(1) > p:nth-child(2) {
+  color: #cc2e38;
 }
 html section.pop.tc_2 > div:nth-child(1) > p:nth-child(3),
 body section.pop.tc_2 > div:nth-child(1) > p:nth-child(3) {
   margin-top: .37rem;
+}
+html section.pop.tc_2 > div:nth-child(1) > p:nth-child(3) > span,
+body section.pop.tc_2 > div:nth-child(1) > p:nth-child(3) > span {
+  color: #cc2e38;
 }
 html section.pop.tc_2 > div:nth-child(1) > p:nth-child(5),
 body section.pop.tc_2 > div:nth-child(1) > p:nth-child(5) {
@@ -732,16 +802,18 @@ body section.pop.tc_2 > div:nth-child(2) {
 html section.pop.tc_2 > div:nth-child(2) > a,
 body section.pop.tc_2 > div:nth-child(2) > a {
   display: inline-block;
-  width: 2.44rem;
-  height: .94rem;
 }
 html section.pop.tc_2 > div:nth-child(2) > a:nth-child(1),
 body section.pop.tc_2 > div:nth-child(2) > a:nth-child(1) {
+  width: 2.44rem;
+  height: .94rem;
   background: url('../images/tc_btn_02.png') no-repeat;
   background-size: cover;
 }
 html section.pop.tc_2 > div:nth-child(2) > a:nth-child(2),
 body section.pop.tc_2 > div:nth-child(2) > a:nth-child(2) {
+  width: 2.44rem;
+  height: .94rem;
   background: url('../images/tc_btn_01.png') no-repeat;
   background-size: cover;
 }
@@ -925,6 +997,71 @@ body section.pop.tc_5 > a {
   background: url('../images/tc_btn.png') no-repeat;
   background-size: cover;
   margin: .62rem auto 0;
+}
+html section.pop.tc_tishi,
+body section.pop.tc_tishi {
+  display: none;
+}
+html section.pop.tc_tishi > div,
+body section.pop.tc_tishi > div {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 5.32rem;
+  height: 3.81rem;
+  background: url('../images/tc_01.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .28rem;
+}
+html section.pop.tc_tishi > div > p,
+body section.pop.tc_tishi > div > p {
+  line-height: .5rem;
+}
+html section.pop.tc_tishi > a,
+body section.pop.tc_tishi > a {
+  display: flex;
+  justify-content: center;
+  width: 2.44rem;
+  height: .94rem;
+  background: url('../images/tc_btn.png') no-repeat;
+  background-size: cover;
+  margin: .62rem auto 0;
+}
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+    /*开始为原始大小*/
+  }
+  25% {
+    transform: scale(1.1);
+    /*放大1.1倍*/
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes mymove {
+  /*Safari and Chrome*/
+  0% {
+    transform: scale(1);
+    /*开始为原始大小*/
+  }
+  25% {
+    transform: scale(1.1);
+    /*放大1.1倍*/
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
 }
 html section.mask,
 body section.mask {
