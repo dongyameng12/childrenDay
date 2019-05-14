@@ -53,7 +53,9 @@
             if (percentage == 1) {
                 $('.loader').remove();
                 $('.home').show();
-                inoutOne()
+                setTimeout(function(){
+                    inoutOne()
+                },500)
             }
         });
     </script>
