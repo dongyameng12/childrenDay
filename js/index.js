@@ -62,8 +62,10 @@ $(document).ready(function () {
                 $('.main').show();
             }
         } else {
-            // alert('没选择')
             showMask();
+            if($(this).hasClass('next_last')){
+                $('#tc_text').text('资格认证')
+            }
             $('.tc_tishi').show();
         }
     });
@@ -115,7 +117,7 @@ $(document).ready(function () {
                     //异网中流量 
                     if ($(current_clickclass).hasClass('allling')) {
                         showMask();
-                        $(current_clickclass).hasClass('cancel')?$('.tc_2').show():  $('.tc_5').show();
+                        $(current_clickclass).hasClass('cancel')?$('.tc_2').show():$('.tc_5').show();
                     } else {
                         showMask();
                         $('.tc_2').show();
