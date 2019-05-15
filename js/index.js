@@ -114,9 +114,8 @@ $(document).ready(function () {
                 } else {
                     //异网中流量 
                     if ($(current_clickclass).hasClass('allling')) {
-                        // alert('查看奖励')
                         showMask();
-                        $('.tc_5').show();
+                        $(current_clickclass).hasClass('cancel')?$('.tc_2').show():  $('.tc_5').show();
                     } else {
                         showMask();
                         $('.tc_2').show();
@@ -139,10 +138,13 @@ $(document).ready(function () {
             //转增
             $('.tc_2').hide();
             $('.tc_3').show();
+            $(current_clickclass).removeClass('cancel');
         } else {
             //  取消
             hideMask();
             $('.tc_2').hide();
+            // 点击取消后加入cancel,用于判断显示那个弹窗
+            $(current_clickclass).removeClass('unling_'+current_change).addClass('allling').addClass('cancel');
         }
     };
     //异网流量弹窗 1（取消）
