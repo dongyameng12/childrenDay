@@ -30,7 +30,6 @@ $(document).ready(function () {
     var current_change
     // 是否分享(默认没分享)
     var noShare = false;
-    var  cheackArr = []
     // 选择
     $('.choose_content ul li').on('click',function(){
         if ($(this).children('div:eq(1)').children('span').hasClass('cheacked')) {

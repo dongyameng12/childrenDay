@@ -825,10 +825,18 @@ html,body{
                         width: 4.83rem;
                         height: 5.83rem;
                         overflow-y: scroll;
-                        font-size: .28rem;
                         >li{
-                            text-align: justify;
                             line-height: .5rem;
+                            font-size: .24rem;
+                            text-align: justify;
+                            &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                                >p{
+                                    &:nth-child(1){
+                                        font-size: .26rem;
+                                        font-weight: bolder;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
