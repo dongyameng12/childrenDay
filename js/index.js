@@ -129,8 +129,7 @@ $(document).ready(function () {
             }
         } else {
             // 未关注
-            alert('未关注');
-            // window.location.href = "https://mp.weixin.qq.com/s/FDD5Q57SnOrWAiYkfyzLFQ";
+            window.location.href = "https://mp.weixin.qq.com/s/I5_SP5hTP5tmwZmWn8_i3Q";
         }
     };
     // (转增和取消)

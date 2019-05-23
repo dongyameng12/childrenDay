@@ -507,8 +507,8 @@ body section.main {
 }
 html section.main > div:nth-child(1),
 body section.main > div:nth-child(1) {
-  width: 7.50rem;
-  height: 5.14rem;
+  width: 7.5rem;
+  height: 8.69rem;
   background: url('../images/main_01.png') no-repeat;
   background-size: cover;
   position: relative;
@@ -531,23 +531,16 @@ body section.main > div:nth-child(1) > a {
 html section.main > div:nth-child(1) > div,
 body section.main > div:nth-child(1) > div {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: .74rem;
-  width: 2.4rem;
-  height: 1rem;
-  color: #b8592a;
-  font-size: .29rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-weight: bolder;
+  top: .87rem;
+  width: 7.5rem;
+  height: 1.41rem;
+  background: url('../images/main_hf.gif') no-repeat;
+  background-size: cover;
 }
 html section.main > div:nth-child(2),
 body section.main > div:nth-child(2) {
-  width: 5.8rem;
-  height: 4.84rem;
+  width: 5.87rem;
+  height: 3.37rem;
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
@@ -556,16 +549,19 @@ body section.main > div:nth-child(2) {
 html section.main > div:nth-child(2) > div,
 body section.main > div:nth-child(2) > div {
   width: 2.45rem;
-  height: 3.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
+html section.main > div:nth-child(2) > div:nth-child(1),
+body section.main > div:nth-child(2) > div:nth-child(1) {
+  height: 2.76rem;
+}
 html section.main > div:nth-child(2) > div:nth-child(1) > p,
 body section.main > div:nth-child(2) > div:nth-child(1) > p {
-  width: 1.34rem;
-  height: 2.46rem;
+  width: 2.16rem;
+  height: 1.75rem;
   background: url('../images/main_02.png') no-repeat;
   background-size: cover;
 }
@@ -580,10 +576,14 @@ body section.main > div:nth-child(2) > div:nth-child(1) > a.unling_left {
   background: url('../images/main_unbtn1.png') no-repeat;
   background-size: cover;
 }
+html section.main > div:nth-child(2) > div:nth-child(2),
+body section.main > div:nth-child(2) > div:nth-child(2) {
+  height: 2.94rem;
+}
 html section.main > div:nth-child(2) > div:nth-child(2) > p,
 body section.main > div:nth-child(2) > div:nth-child(2) > p {
-  width: 2.62rem;
-  height: 2.46rem;
+  width: 2.17rem;
+  height: 1.91rem;
   background: url('../images/main_03.png') no-repeat;
   background-size: cover;
 }
