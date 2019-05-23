@@ -177,6 +177,12 @@ $(document).ready(function () {
         $(this).parent().hide();
         hideMask();
     });
+        var rtn = false;
+        //移动号段验证
+        // var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(178)|(147))[\d]{8}$/;
+        var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(17[2|8])|(165)|(147)|198)[\d]{8}$/;
+        if (regtel.test(tel)) {
+            rtn = true;
      //关闭
      $('.close3').on('click', function () {
         $(this).parent().hide();
@@ -184,12 +190,6 @@ $(document).ready(function () {
     });
     //移动手机号码验证
     function istel(tel) {
-        var rtn = false;
-        //移动号段验证
-        // var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(178)|(147))[\d]{8}$/;
-        var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(17[2|8])|(165)|(147)|198)[\d]{8}$/;
-        if (regtel.test(tel)) {
-            rtn = true;
         }
         return rtn;
     }

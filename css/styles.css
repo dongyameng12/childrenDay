@@ -155,6 +155,8 @@ body section.home > div:nth-child(3) > a {
   height: .98rem;
   background: url('../images/h_btn.png') no-repeat;
   background-size: cover;
+  position: relative;
+  top: -0.6rem;
 }
 html section.choose,
 body section.choose {
@@ -178,7 +180,7 @@ body section.choose > div:nth-child(1) > p:nth-child(2) {
 html section.choose > div:nth-child(2),
 body section.choose > div:nth-child(2) {
   width: 7.5rem;
-  height: 6.10rem;
+  height: 5.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +449,7 @@ body section.choose.choose_05 > a {
   height: .94rem;
   background: url('../images/cloth_btn.png') no-repeat;
   background-size: cover;
-  margin: .35rem auto 0;
+  margin: .2rem auto 0;
 }
 html section.choose.choose_05 .choose_content > ul > li > div:nth-child(1),
 body section.choose.choose_05 .choose_content > ul > li > div:nth-child(1) {
@@ -495,7 +497,7 @@ body section.choose > a {
   height: .82rem;
   background: url('../images/next.png') no-repeat;
   background-size: cover;
-  margin: .35rem auto 0;
+  margin: .2rem auto 0;
 }
 html section.main,
 body section.main {
@@ -508,19 +510,23 @@ body section.main {
 html section.main > div:nth-child(1),
 body section.main > div:nth-child(1) {
   width: 7.5rem;
-  height: 8.69rem;
+  height: 7.86rem;
   background: url('../images/main_01.png') no-repeat;
   background-size: cover;
   position: relative;
 }
 html section.main > div:nth-child(1) > a,
 body section.main > div:nth-child(1) > a {
+  display: inline-block;
+}
+html section.main > div:nth-child(1) > a:nth-child(1),
+body section.main > div:nth-child(1) > a:nth-child(1) {
   position: absolute;
   top: .3rem;
-  right: .17rem;
-  display: inline-block;
-  width: 1.38rem;
-  height: .4rem;
+  left: .17rem;
+  writing-mode: vertical-lr;
+  width: .4rem;
+  height: 1.38rem;
   border-radius: .2rem;
   background-color: #0088ef;
   line-height: .4rem;
@@ -528,12 +534,15 @@ body section.main > div:nth-child(1) > a {
   color: #fff;
   font-size: .24rem;
 }
-html section.main > div:nth-child(1) > div,
-body section.main > div:nth-child(1) > div {
+html section.main > div:nth-child(1) > a:nth-child(2),
+body section.main > div:nth-child(1) > a:nth-child(2) {
   position: absolute;
-  top: .87rem;
-  width: 7.5rem;
-  height: 1.41rem;
+  top: .2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 6rem;
+  height: 1.33rem;
   background: url('../images/main_hf.gif') no-repeat;
   background-size: cover;
 }
@@ -545,6 +554,7 @@ body section.main > div:nth-child(2) {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  position: relative;
 }
 html section.main > div:nth-child(2) > div,
 body section.main > div:nth-child(2) > div {
@@ -575,6 +585,13 @@ body section.main > div:nth-child(2) > div:nth-child(1) > a.unling_left {
   height: .94rem;
   background: url('../images/main_unbtn1.png') no-repeat;
   background-size: cover;
+  animation: mymove 1.5s infinite;
+  -webkit-animation: mymove 1.5s infinite;
+  /*Safari and Chrome*/
+  animation-direction: alternate;
+  /*轮流反向播放动画。*/
+  animation-timing-function: ease-in-out;
+  /*动画的速度曲线*/
 }
 html section.main > div:nth-child(2) > div:nth-child(2),
 body section.main > div:nth-child(2) > div:nth-child(2) {
@@ -597,13 +614,18 @@ body section.main > div:nth-child(2) > div:nth-child(2) > a.unling_right {
   height: .94rem;
   background: url('../images/main_unbtn2.png') no-repeat;
   background-size: cover;
-  animation: mymove 1.5s infinite;
-  -webkit-animation: mymove 1.5s infinite;
-  /*Safari and Chrome*/
-  animation-direction: alternate;
-  /*轮流反向播放动画。*/
-  animation-timing-function: ease-in-out;
-  /*动画的速度曲线*/
+}
+html section.main > div:nth-child(2) > div:nth-child(3),
+body section.main > div:nth-child(2) > div:nth-child(3) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 2.4rem;
+  height: .84rem;
+  background: url('../images/main_su.png') no-repeat;
+  background-size: cover;
 }
 html section.main > div:nth-child(2) > div .allling,
 body section.main > div:nth-child(2) > div .allling {
@@ -1087,6 +1109,16 @@ body section.pop.tc_tishi > a {
   75% {
     transform: scale(1.1);
   }
+}
+html .mymove,
+body .mymove {
+  animation: mymove 1.5s infinite;
+  -webkit-animation: mymove 1.5s infinite;
+  /*Safari and Chrome*/
+  animation-direction: alternate;
+  /*轮流反向播放动画。*/
+  animation-timing-function: ease-in-out;
+  /*动画的速度曲线*/
 }
 html section.mask,
 body section.mask {

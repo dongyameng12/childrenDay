@@ -134,6 +134,8 @@ html,body{
                         height:.98rem;
                         background: url('../images/h_btn.png') no-repeat;
                         background-size: cover;
+                        position: relative;
+                        top: -.6rem;
                     } 
                 }
             }
@@ -159,7 +161,7 @@ html,body{
                 }
                 &:nth-child(2){
                   width: 7.5rem;
-                  height: 6.10rem;
+                  height: 5.6rem;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -580,7 +582,7 @@ html,body{
                      height:.94rem;
                      background: url('../images/cloth_btn.png') no-repeat;
                      background-size: cover;
-                     margin: .35rem auto 0;
+                     margin: .2rem auto 0;
                 }
                 .choose_content{
                     >ul{
@@ -656,7 +658,7 @@ html,body{
                  height: .82rem;
                  background: url('../images/next.png') no-repeat;
                  background-size: cover;
-                 margin: .35rem auto 0;
+                 margin: .2rem auto 0;
             }
         }
         // 主页
@@ -669,33 +671,38 @@ html,body{
             >div{
                 &:nth-child(1){
                     width: 7.5rem;
-                    height:8.69rem;
+                    height:7.86rem;
                     background: url('../images/main_01.png') no-repeat;
                     background-size: cover;
                     position: relative; 
                     >a{
-                        position: absolute;
-                        top: .3rem;
-                        right: .17rem;
                         display: inline-block;
-                        width: 1.38rem;
-                        height: .4rem;
-                        border-radius: .2rem;
-                        background-color: #0088ef;
-                        line-height: .4rem;
-                        text-align: center;
-                        color: #fff;
-                        font-size: .24rem;
+                        &:nth-child(1){
+                            position: absolute;
+                            top: .3rem;
+                            left: .17rem;
+                            writing-mode: vertical-lr;
+                            width: .4rem;
+                            height: 1.38rem;
+                            border-radius: .2rem;
+                            background-color: #0088ef;
+                            line-height: .4rem;
+                            text-align: center;
+                            color: #fff;
+                            font-size: .24rem;
+                        }
+                        &:nth-child(2){
+                            position: absolute;
+                            top: .2rem;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            width: 6rem;
+                            height: 1.33rem;
+                            background: url('../images/main_hf.gif') no-repeat;
+                            background-size: cover;
+                        }
                     }
-                    >div{
-                        position: absolute;
-                        top: .87rem;
-                        width: 7.5rem;
-                        height: 1.41rem;
-                        background: url('../images/main_hf.gif') no-repeat;
-                        background-size: cover;
-                    }
-
                 }
                 &:nth-child(2){
                     width: 5.87rem;
@@ -704,6 +711,7 @@ html,body{
                     display: flex;
                     align-items: flex-end;
                     justify-content: space-between;
+                    position: relative;
                     >div{
                         width: 2.45rem;
                         display: flex;
@@ -725,6 +733,10 @@ html,body{
                                     height:.94rem;
                                     background: url('../images/main_unbtn1.png') no-repeat;
                                     background-size: cover;  
+                                    animation:mymove 1.5s infinite;
+                                    -webkit-animation:mymove 1.5s infinite; /*Safari and Chrome*/
+                                    animation-direction:alternate;/*轮流反向播放动画。*/
+                                    animation-timing-function: ease-in-out; /*动画的速度曲线*/
                                 }
                             }
 
@@ -744,13 +756,21 @@ html,body{
                                     height:.94rem;
                                     background: url('../images/main_unbtn2.png') no-repeat;
                                     background-size: cover; 
-                                    animation:mymove 1.5s infinite;
-                                    -webkit-animation:mymove 1.5s infinite; /*Safari and Chrome*/
-                                    animation-direction:alternate;/*轮流反向播放动画。*/
-                                    animation-timing-function: ease-in-out; /*动画的速度曲线*/
+                                  
                                 }
                             }
 
+                        }
+                        &:nth-child(3){
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            margin: auto;
+                            width: 2.4rem;
+                            height: .84rem;
+                            background: url('../images/main_su.png') no-repeat;
+                            background-size: cover;
                         }
                         // 查看按钮
                         .allling{
@@ -1201,6 +1221,14 @@ html,body{
                     transform: scale(1.1);
                 }
         }
+        .mymove{
+            animation:mymove 1.5s infinite;
+            -webkit-animation:mymove 1.5s infinite; /*Safari and Chrome*/
+            animation-direction:alternate;/*轮流反向播放动画。*/
+            animation-timing-function: ease-in-out; /*动画的速度曲线*/
+        }
+        // 摇晃
+      
         /* 遮罩层 */
         section.mask{
             position: absolute;
@@ -1209,6 +1237,7 @@ html,body{
             background-color: rgba(0,0,0,.9);
             z-index: 100;
         }
+        
 }
 
              
