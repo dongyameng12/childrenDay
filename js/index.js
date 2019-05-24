@@ -20,8 +20,7 @@ $(document).ready(function () {
     // 是否分享(默认没分享)
     var noShare = false;
     // 主页显示内容(随机四个分数)
-    // var fendata = parseInt(Math.random()*4);
-    var fendata = 0;
+    var fendata = parseInt(Math.random()*4);
     var mainArr = [
         {
             fenImg:'images/88.png',
