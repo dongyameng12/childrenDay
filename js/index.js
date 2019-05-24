@@ -19,6 +19,8 @@ $(document).ready(function () {
     var current_change
     // 是否分享(默认没分享)
     var noShare = false;
+    // 随机产生三个链接（测试用）
+    var data_left = parseInt(Math.random() * 3);
     // 主页右边按钮展示的链接
     var data_right
     // 主页显示内容(随机四个分数)
@@ -103,14 +105,13 @@ $(document).ready(function () {
         $('.tc_rule').show();
     })
     // 点击主页的按钮
+  
     $('.lottery').on('click', function () {
         // 左边
         if ($(this).hasClass('main_left')) {
             current_clickclass = '.main_left'
             current_change = 'left'
             //本网链接
-            // 随机产生三个链接（测试用）
-            var data_left = parseInt(Math.random() * 3);
             switch (data_left) {
                 case 0:
                     // 手厅活动
