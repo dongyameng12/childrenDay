@@ -136,6 +136,8 @@ html,body{
                         background-size: cover;
                         position: relative;
                         top: -.6rem;
+                        // animation:shake 3s infinite ;
+                        // -webkit-animation:shake 3s infinite ;
                     } 
                 }
             }
@@ -690,6 +692,10 @@ html,body{
                             text-align: center;
                             color: #fff;
                             font-size: .24rem;
+                            text-align: justify;
+                            text-align-last: justify;
+                            padding: .15rem 0;
+                            box-sizing: border-box;
                         }
                         &:nth-child(2){
                             position: absolute;
@@ -703,6 +709,30 @@ html,body{
                             background-size: cover;
                         }
                     }
+                    >div{
+                        >img{
+                            position: absolute;
+                            left: 2.77rem;
+                            top: 3.96rem;
+                            width: 1.91rem;
+                            height: .99rem;
+                        }
+                        >div{
+                            position: absolute;
+                            top: 5.3rem;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            text-align: center;
+                            font-size: .24rem;
+                            color: #b35125;
+                            height: 1.58rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                    }
+                 
                 }
                 &:nth-child(2){
                     width: 5.87rem;
@@ -918,7 +948,8 @@ html,body{
                         display: inline-block;
                         width: 4.8rem;
                         height: 1.34rem;
-                        background-color: #0077ef;
+                        background-size: cover;
+                        background-repeat: no-repeat;
                         margin-top: .54rem;
                     }
                 }
@@ -1142,10 +1173,9 @@ html,body{
                         display: inline-block;
                         width: 4.8rem;
                         height: 1.34rem;
-                        background-color: rgb(189, 28, 28);
                         margin: .37rem auto 0;
-                        // background: url(../images/cm_10GB.gif) center no-repeat;
-                        // background-size: cover;
+                        background-size: cover;
+                        background-repeat: no-repeat;
                     }
                 }
                 >a{
@@ -1228,7 +1258,49 @@ html,body{
             animation-timing-function: ease-in-out; /*动画的速度曲线*/
         }
         // 摇晃
-      
+          .cake{
+            animation:move 4s infinite;
+            -webkit-animation:move 4s  infinite;
+            }
+          @keyframes move
+          {
+              0%, 65%{ 
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+              }
+              70%,80%, 90%  {  
+                -webkit-transform: translate3d(-10px, 0, 0);
+                transform: translate3d(-10px, 0, 0);
+              }
+              75%, 85% ,95% {  
+                -webkit-transform: translate3d(10px, 0, 0);
+                transform: translate3d(10px, 0, 0);
+              }
+              100% {  
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+              }
+          }
+          
+          @-webkit-keyframes move
+          {
+            0%, 65%{ 
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+            }
+            70%,80%, 90%  {  
+              -webkit-transform: translate3d(-10px, 0, 0);
+              transform: translate3d(-10px, 0, 0);
+            }
+            75%, 85% ,95% {  
+              -webkit-transform: translate3d(10px, 0, 0);
+              transform: translate3d(10px, 0, 0);
+            }
+            100% {  
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+            }
+            }
         /* 遮罩层 */
         section.mask{
             position: absolute;

@@ -1,7 +1,7 @@
 ﻿
 // ios点击事件不触发
-$(function() {  
-    FastClick.attach(document.body);  
+$(function () {
+    FastClick.attach(document.body);
 })
 
 $(document).ready(function () {
@@ -19,21 +19,53 @@ $(document).ready(function () {
     var current_change
     // 是否分享(默认没分享)
     var noShare = false;
+    // 主页显示内容(随机四个分数)
+    var fendata = parseInt(Math.random()*4);
+    var mainArr = [
+        {
+            fenImg:'images/88.png',
+            ping_01:'恭喜你通过了资格检测！',
+            ping_02:'虽然年龄超龄了、身高超限了、体重超标了',
+            ping_03:'不过童心还在哦，特准许再过一次儿童节',
+            ping_04:'祝节日快乐！快去领取你的惊喜礼物~'
+        },
+        {
+            fenImg:'images/90.png',
+            ping_01:'童真满满，童趣多多',
+            ping_02:'你是最适合过儿童节的大朋友啦！',
+            ping_03:'愿你永远无忧无虑、快乐幸福~',
+            ping_04:'祝节日快乐！快去领取你的惊喜礼物~'
+        },
+        {
+            fenImg:'images/95.png',
+            ping_01:'恭喜你通过资格检测！',
+            ping_02:'没想到你的童年这么丰富多彩',
+            ping_03:'祝你永远像儿童般快乐！',
+            ping_04:'快去开启你的幸运礼物吧~'
+        },
+        {
+            fenImg:'images/99.png',
+            ping_01:'恭喜你呀，通过了资格检测！',
+            ping_02:'留住几个童年的幻想，让生活更有希望',
+            ping_03:'童年短暂，童心无限。',
+            ping_04:'儿童节到了，快来领礼物啦~'
+        }
+    ]
     // 选择
-    $('.choose_content ul li').on('click',function(){
+    $('.choose_content ul li').on('click', function () {
         if ($(this).children('div:eq(1)').children('span').hasClass('cheacked')) {
             $(this).children('div:eq(1)').children('span').removeClass('cheacked');
         } else {
-            $(this).children('div:eq(1)').children('span').addClass('cheacked'); 
+            $(this).children('div:eq(1)').children('span').addClass('cheacked');
         }
     })
 
     //点击下一页 
-    $('.next').on('click',function(){
+    $('.next').on('click', function () {
         var _this = $(this)
         var li_obj = _this.siblings('.choose_content').children('ul').children('li')
         var i = 0
-        $.each(li_obj,function(index,item){
+        $.each(li_obj, function (index, item) {
             var status = $(this).children('div:eq(1)').children('span').hasClass('cheacked')
             if (status) {
                 i++
@@ -47,48 +79,85 @@ $(document).ready(function () {
             if (chose_obj.length > 0) {
                 $(this).parents('.choose').hide().next('.choose').show()
             } else {
+                $('.main_context').html("<img src='"+mainArr[fendata].fenImg+"'><div><p>"+mainArr[fendata].ping_01+"</p><p> "+mainArr[fendata].ping_02+"</p><p>"+ mainArr[fendata].ping_03+"</p><p>"+mainArr[fendata].ping_04+"</p></div>")
                 $('.main').show();
             }
         } else {
             showMask();
-            if($(this).hasClass('next_last')){
+            if ($(this).hasClass('next_last')) {
                 $('#tc_text').text('资格认证')
             }
             $('.tc_tishi').show();
         }
     });
     // 点击首页开始
-    $('#start_game').on('click',function(){
+    $('#start_game').on('click', function () {
         $('.home').hide();
         $('.choose_01').show();
     })
     //聊天气泡淡入    
     // 活动规则
-    $('.rule').on('click',function(){
+    $('.rule').on('click', function () {
         $('.tc_rule').show();
     })
     // 点击主页的按钮
-    $('.lottery').on('click',function () {
+    $('.lottery').on('click', function () {
         // 左边
         if ($(this).hasClass('main_left')) {
             current_clickclass = '.main_left'
             current_change = 'left'
+            //本网链接
+            // 随机产生三个链接（测试用）
+            var data_left = parseInt(Math.random()*3);
+            switch(data_left){
+                case 0:
+                    // 手厅活动
+                    $('#alink_cm').css('background-image','url(images/a_cm_shouting.gif)').attr('href','')
+                    break;
+                case 1:
+                    // 惠享券
+                    $('#alink_cm').css('background-image','url(images/a_cm_huxiang.gif)').attr('href','http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=fxyll20G#wechat_redirect')
+                    break;
+                case 2:
+                    // 流量放心用
+                    $('#alink_cm').css('background-image','url(images/a_cm_fangxin.gif)').attr('href','http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=cxfree#wechat_redirect')
+                    break;
+                }
+            // 异网移动王卡
+            $('#alink_cy').css('background-image','url(images/a_cy_wangka.gif)').attr('href','https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKWXYW')
             jiangli();
-        }else if ($(this).hasClass('main_right')) {
+        } else if ($(this).hasClass('main_right')) {
             // 右边
-            // 已经分享
-            if (noShare) {
-                current_clickclass = '.main_right'
-                current_change = 'right'
-                jiangli(); 
-            }else{
-                $('.share').show();
+            var status = $('.main_left').hasClass('unling_left')
+            if (!status) {
+                // 已经分享
+                if (noShare) {
+                    current_clickclass = '.main_right'
+                    current_change = 'right'
+                    //本网链接
+                    // 随机产生二个链接（测试用）
+                    var data_right = parseInt(Math.random()*2);
+                    switch(data_right){
+                        case 0:
+                            // 倍享券
+                            $('#alink_cm').css('background-image','url(images/a_cm_beixiang.gif)').attr('href',' http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=cxfree#wechat_redirect')        
+                            break;
+                        case 1:
+                            // 移动网卡
+                            $('#alink_cm').css('background-image','url(images/a_cm_beixiang.gif)').attr('href','')        
+                            break;
+                    }
+                    // 异网无限卡
+                    $('#alink_cy').css('background-image','url(images/a_cy_wuxian.gif)').attr('href','   https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=WXKWTYW')
+                    jiangli();
+                } else {
+                    $('.share').show();
+                }
             }
-          
         }
     })
     // 分享（测试用）
-    $('.share').on('click',function(){
+    $('.share').on('click', function () {
         $('.share').hide();
         noShare = true;
     })
@@ -105,14 +174,14 @@ $(document).ready(function () {
                     //异网中流量 
                     if ($(current_clickclass).hasClass('allling')) {
                         showMask();
-                        $(current_clickclass).hasClass('cancel')?$('.tc_2').show():$('.tc_5').show();
+                        $(current_clickclass).hasClass('cancel') ? $('.tc_2').show() : $('.tc_5').show();
                     } else {
                         showMask();
                         $('.tc_2').show();
                     }
                 }
             } else {
-                 // 未绑定手机号
+                // 未绑定手机号
                 $('.main').hide();
                 $('.binded').show();
             }
@@ -133,7 +202,9 @@ $(document).ready(function () {
             hideMask();
             $('.tc_2').hide();
             // 点击取消后加入cancel,用于判断显示那个弹窗
-            $(current_clickclass).removeClass('unling_'+current_change).addClass('allling').addClass('cancel');
+            $(current_clickclass).removeClass('unling_' + current_change).addClass('allling').addClass('cancel')
+            //// 右边动效
+            rightBtn()
         }
     };
     //异网流量弹窗 1（取消）
@@ -173,38 +244,50 @@ $(document).ready(function () {
     //关闭(中奖)
     $('.close').on('click', function () {
         // 获取奖励的最后一步
-        $(current_clickclass).removeClass('unling_'+current_change).addClass('allling');
+        $(current_clickclass).removeClass('unling_' + current_change).addClass('allling');
+        //// 右边动效
+        rightBtn()
         $(this).parent().hide();
         hideMask();
     });
+    //主页右边按钮动效
+    function rightBtn(){
+        if($('.main_right').hasClass('unling_right')){
+            $('.main_right').addClass('mymove');  
+        }else{
+            $('.main_right').removeClass('mymove');      
+        }
+    }
+    //关闭
+    $('.close3').on('click', function () {
+        $(this).parent().hide();
+        hideMask();
+    });
+    //移动手机号码验证
+    function istel(tel) {
         var rtn = false;
         //移动号段验证
         // var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(178)|(147))[\d]{8}$/;
         var regtel = /^((13[4-9])|(15([0-2]|[7-9]))|(18[2|3|4|7|8])|(17[2|8])|(165)|(147)|198)[\d]{8}$/;
         if (regtel.test(tel)) {
             rtn = true;
-     //关闭
-     $('.close3').on('click', function () {
-        $(this).parent().hide();
-        hideMask();
-    });
-    //移动手机号码验证
-    function istel(tel) {
         }
         return rtn;
     }
+  
+
 
     // 测试
-    $('.test2').on('click',function(){
-        $('.test2').css('color','red');
+    $('.test2').on('click', function () {
+        $('.test2').css('color', 'red');
         attention = false;
     });
-    $('.test3').on('click',function(){
-        $('.test3').css('color','red');
+    $('.test3').on('click', function () {
+        $('.test3').css('color', 'red');
         binding = false;
     });
-    $('.test4').on('click',function(){
-        $('.test4').css('color','red');
+    $('.test4').on('click', function () {
+        $('.test4').css('color', 'red');
         CM = false;
     });
 });
@@ -222,50 +305,12 @@ function hideMask() {
 }
 
 // 淡出执行一次
-function inoutOne () {
-    // $("#talk_01").fadeIn(1000,function () {
-    //     $("#talk_02").fadeIn(1000,function () {
-    //         $("#talk_03").fadeIn(1000,function () {
-    //             $("#talk_04").fadeIn(1000,function () {
-    //                 $("#talk_05").fadeIn(1000);
-    //             });
-    //         });
-    //     });
-    // })
-    $("#talk_0"+i).fadeIn(1000,function () {
+var i = 1
+function inoutOne() {
+    $("#talk_0" + i).fadeIn(1000, function () {
         if (i < 5) {
             i++
             return inoutOne()
-        } 
-    })
-}
-
-// 一直淡入淡出1
-var i = 1
-function inoutAuto () {
-    $("#talk_0"+i).fadeIn(1000,function () {
-        if (i < 5) {
-            i++
-            return inoutAuto()
-        } else {
-            inoutTwo()
         }
     })
 }
-
-function inoutTwo () {
-    $("#talk_0"+i).fadeOut(1000,function () {
-        if (i > 1) {
-            i--
-            return inoutTwo()
-        } else {
-            inoutAuto()
-        }
-    })
-}
-
-
-
-
-
-

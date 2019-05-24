@@ -533,6 +533,10 @@ body section.main > div:nth-child(1) > a:nth-child(1) {
   text-align: center;
   color: #fff;
   font-size: .24rem;
+  text-align: justify;
+  text-align-last: justify;
+  padding: .15rem 0;
+  box-sizing: border-box;
 }
 html section.main > div:nth-child(1) > a:nth-child(2),
 body section.main > div:nth-child(1) > a:nth-child(2) {
@@ -545,6 +549,29 @@ body section.main > div:nth-child(1) > a:nth-child(2) {
   height: 1.33rem;
   background: url('../images/main_hf.gif') no-repeat;
   background-size: cover;
+}
+html section.main > div:nth-child(1) > div > img,
+body section.main > div:nth-child(1) > div > img {
+  position: absolute;
+  left: 2.77rem;
+  top: 3.96rem;
+  width: 1.91rem;
+  height: .99rem;
+}
+html section.main > div:nth-child(1) > div > div,
+body section.main > div:nth-child(1) > div > div {
+  position: absolute;
+  top: 5.3rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: .24rem;
+  color: #b35125;
+  height: 1.58rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 html section.main > div:nth-child(2),
 body section.main > div:nth-child(2) {
@@ -786,7 +813,8 @@ body section.pop.tc_1 > div > a {
   display: inline-block;
   width: 4.8rem;
   height: 1.34rem;
-  background-color: #0077ef;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: .54rem;
 }
 html section.pop.tc_1 > a,
@@ -1032,8 +1060,9 @@ body section.pop.tc_5 > div > a {
   display: inline-block;
   width: 4.8rem;
   height: 1.34rem;
-  background-color: #bd1c1c;
   margin: .37rem auto 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 html section.pop.tc_5 > a,
 body section.pop.tc_5 > a {
@@ -1119,6 +1148,57 @@ body .mymove {
   /*轮流反向播放动画。*/
   animation-timing-function: ease-in-out;
   /*动画的速度曲线*/
+}
+html .cake,
+body .cake {
+  animation: move 4s infinite;
+  -webkit-animation: move 4s  infinite;
+}
+@keyframes move {
+  0%,
+  65% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  70%,
+  80%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  75%,
+  85%,
+  95% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes move {
+  0%,
+  65% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  70%,
+  80%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  75%,
+  85%,
+  95% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 html section.mask,
 body section.mask {
