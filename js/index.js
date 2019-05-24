@@ -129,7 +129,6 @@ $(document).ready(function () {
             $('#alink_cy').css('background-image', 'url(images/a_cy_wangka.gif)').attr('href', 'https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKWXYW')
             jiangli();
         } else if ($(this).hasClass('main_right')) {
-
             // 右边
             // 已经分享
             if (noShare) {
@@ -143,6 +142,8 @@ $(document).ready(function () {
                         $('#alink_cm').css('background-image', 'url(images/a_cy_wangka.gif)').attr('href', 'https://mp.weixin.qq.com/s?__biz=MjM5Nzg1NTQyMQ==&mid=2677712529&idx=1&sn=9c1eb5ed965c2e016b03132138b079f9&chksm=bcbdaf438bca2655635226aa3296329e8497e303ccd2ed37653e2e1a00f9001c70ffd7b9c038&mpshare=1&scene=1&srcid=0524E7cHQBzxiDAjv8wi1WRf&key=e37b65ef319f79ace47c72b232008c7867680022704be0cccb84866ce750e357ad47f83d024df5ce8c02dddd156f9e09733c253124c6ec15fe32de4738e6900cd14d03a6a2a2182f3a2571cf9cddfda2&ascene=1&uin=MTQwMjgyMjAxOA%3D%3D&devicetype=Windows+10&version=62060739&lang=zh_CN&pass_ticket=fQDD8A14KpSkQqZO14sx3wKJu1K7IthBAzj8baFf0E%2F%2F3aqviMjDF46ijCnbdutM')
                         break;
                     }
+                    // 异网无限卡
+                 $('#alink_cy').css('background-image', 'url(images/a_cy_wuxian.gif)').attr('href', '   https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=WXKWTYW')
                 jiangli();
             } else {
                 $('.share').show();
