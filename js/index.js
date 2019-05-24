@@ -19,36 +19,38 @@ $(document).ready(function () {
     var current_change
     // 是否分享(默认没分享)
     var noShare = false;
+    // 主页右边按钮展示的链接
+    var data_right
     // 主页显示内容(随机四个分数)
-    var fendata = parseInt(Math.random()*4);
+    var fendata = parseInt(Math.random() * 4);
     var mainArr = [
         {
-            fenImg:'images/88.png',
-            ping_01:'恭喜你通过了资格检测！',
-            ping_02:'虽然超龄了、身高超限了、体重超标了',
-            ping_03:'但童心还在，特准许再过一次儿童节',
-            ping_04:' 祝节日快乐！快去领取惊喜礼物吧~'
+            fenImg: 'images/88.png',
+            ping_01: '恭喜你通过了资格检测！',
+            ping_02: '虽然超龄了、身高超限了、体重超标了',
+            ping_03: '但童心还在，特准许再过一次儿童节',
+            ping_04: ' 祝节日快乐！快去领取惊喜礼物吧~'
         },
         {
-            fenImg:'images/90.png',
-            ping_01:'童真满满，童趣多多',
-            ping_02:'你是最适合过儿童节的大朋友啦！',
-            ping_03:'愿你永远无忧无虑、快乐幸福~',
-            ping_04:'祝节日快乐！快去领取你的惊喜礼物~'
+            fenImg: 'images/90.png',
+            ping_01: '童真满满，童趣多多',
+            ping_02: '你是最适合过儿童节的大朋友啦！',
+            ping_03: '愿你永远无忧无虑、快乐幸福~',
+            ping_04: '祝节日快乐！快去领取你的惊喜礼物~'
         },
         {
-            fenImg:'images/95.png',
-            ping_01:'恭喜你通过资格检测！',
-            ping_02:'没想到你的童年这么丰富多彩',
-            ping_03:'祝你永远像儿童般快乐！',
-            ping_04:'快去开启你的幸运礼物吧~'
+            fenImg: 'images/95.png',
+            ping_01: '恭喜你通过资格检测！',
+            ping_02: '没想到你的童年这么丰富多彩',
+            ping_03: '祝你永远像儿童般快乐！',
+            ping_04: '快去开启你的幸运礼物吧~'
         },
         {
-            fenImg:'images/99.png',
-            ping_01:'恭喜你呀，通过了资格检测！',
-            ping_02:'留住几个童年的幻想，让生活更有希望',
-            ping_03:'童年短暂，童心无限。',
-            ping_04:'儿童节到了，快来领礼物啦~'
+            fenImg: 'images/99.png',
+            ping_01: '恭喜你呀，通过了资格检测！',
+            ping_02: '留住几个童年的幻想，让生活更有希望',
+            ping_03: '童年短暂，童心无限。',
+            ping_04: '儿童节到了，快来领礼物啦~'
         }
     ]
     // 选择
@@ -79,7 +81,7 @@ $(document).ready(function () {
             if (chose_obj.length > 0) {
                 $(this).parents('.choose').hide().next('.choose').show()
             } else {
-                $('.main_context').html("<img src='"+mainArr[fendata].fenImg+"'><div><p>"+mainArr[fendata].ping_01+"</p><p> "+mainArr[fendata].ping_02+"</p><p>"+ mainArr[fendata].ping_03+"</p><p>"+mainArr[fendata].ping_04+"</p></div>")
+                $('.main_context').html("<img src='" + mainArr[fendata].fenImg + "'><div><p>" + mainArr[fendata].ping_01 + "</p><p> " + mainArr[fendata].ping_02 + "</p><p>" + mainArr[fendata].ping_03 + "</p><p>" + mainArr[fendata].ping_04 + "</p></div>")
                 $('.main').show();
             }
         } else {
@@ -108,30 +110,39 @@ $(document).ready(function () {
             current_change = 'left'
             //本网链接
             // 随机产生三个链接（测试用）
-            var data_left = parseInt(Math.random()*3);
-            switch(data_left){
+            var data_left = parseInt(Math.random() * 3);
+            switch (data_left) {
                 case 0:
                     // 手厅活动
-                    $('#alink_cm').css('background-image','url(images/a_cm_shouting.gif)').attr('href','http://sc.bj.chinamobile.com/activity/loading/loading.html?actname=coupon')
+                    $('#alink_cm').css('background-image', 'url(images/a_cm_shouting.gif)').attr('href', 'http://sc.bj.chinamobile.com/activity/loading/loading.html?actname=coupon')
                     break;
                 case 1:
                     // 惠享券
-                    $('#alink_cm').css('background-image','url(images/a_cm_huxiang.gif)').attr('href','http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=fxyll20G#wechat_redirect')
+                    $('#alink_cm').css('background-image', 'url(images/a_cm_huxiang.gif)').attr('href', 'http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=fxyll20G#wechat_redirect')
                     break;
                 case 2:
                     // 流量放心用
-                    $('#alink_cm').css('background-image','url(images/a_cm_fangxin.gif)').attr('href',' https://mp.weixin.qq.com/s/K6W3CaZajWdDb4WgBxJUXQ')
+                    $('#alink_cm').css('background-image', 'url(images/a_cm_fangxin.gif)').attr('href', ' https://mp.weixin.qq.com/s/K6W3CaZajWdDb4WgBxJUXQ')
                     break;
-                }
+            }
             // 异网移动王卡
-            $('#alink_cy').css('background-image','url(images/a_cy_wangka.gif)').attr('href','https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKWXYW')
+            $('#alink_cy').css('background-image', 'url(images/a_cy_wangka.gif)').attr('href', 'https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKWXYW')
             jiangli();
         } else if ($(this).hasClass('main_right')) {
-                // 右边
-              // 已经分享
+
+            // 右边
+            // 已经分享
             if (noShare) {
-                current_clickclass = '.main_right'
-                current_change = 'right'
+                switch (data_right) {
+                    case 0:
+                        // 倍享券
+                        $('#alink_cm').css('background-image', 'url(images/a_cm_beixiang.gif)').attr('href', ' http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=cxfree#wechat_redirect')
+                        break;
+                    case 1:
+                        // 移动网卡
+                        $('#alink_cm').css('background-image', 'url(images/a_cy_wangka.gif)').attr('href', 'https://mp.weixin.qq.com/s?__biz=MjM5Nzg1NTQyMQ==&mid=2677712529&idx=1&sn=9c1eb5ed965c2e016b03132138b079f9&chksm=bcbdaf438bca2655635226aa3296329e8497e303ccd2ed37653e2e1a00f9001c70ffd7b9c038&mpshare=1&scene=1&srcid=0524E7cHQBzxiDAjv8wi1WRf&key=e37b65ef319f79ace47c72b232008c7867680022704be0cccb84866ce750e357ad47f83d024df5ce8c02dddd156f9e09733c253124c6ec15fe32de4738e6900cd14d03a6a2a2182f3a2571cf9cddfda2&ascene=1&uin=MTQwMjgyMjAxOA%3D%3D&devicetype=Windows+10&version=62060739&lang=zh_CN&pass_ticket=fQDD8A14KpSkQqZO14sx3wKJu1K7IthBAzj8baFf0E%2F%2F3aqviMjDF46ijCnbdutM')
+                        break;
+                    }
                 jiangli();
             } else {
                 $('.share').show();
@@ -141,11 +152,16 @@ $(document).ready(function () {
     // 分享（测试用）
     $('.share').on('click', function () {
         $('.share').hide();
+        rightAward();
+        noShare = true;
+    })
+    // 右边按钮奖励情况
+    function rightAward() {
         current_clickclass = '.main_right'
         current_change = 'right'
         //本网链接
         // 随机产生二个链接（测试用）
-        var data_right = parseInt(Math.random() * 2);
+        data_right = parseInt(Math.random() * 2);
         switch (data_right) {
             case 0:
                 // 倍享券
@@ -159,8 +175,7 @@ $(document).ready(function () {
         // 异网无限卡
         $('#alink_cy').css('background-image', 'url(images/a_cy_wuxian.gif)').attr('href', '   https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=WXKWTYW')
         jiangli();
-        noShare = true;
-    })
+    }
     // 判断关注，绑定等
     function jiangli() {
         if (attention) {
@@ -251,11 +266,11 @@ $(document).ready(function () {
         hideMask();
     });
     //主页右边按钮动效
-    function rightBtn(){
-        if($('.main_right').hasClass('unling_right')){
-            $('.main_right').addClass('mymove');  
-        }else{
-            $('.main_right').removeClass('mymove');      
+    function rightBtn() {
+        if ($('.main_right').hasClass('unling_right')) {
+            $('.main_right').addClass('mymove');
+        } else {
+            $('.main_right').removeClass('mymove');
         }
     }
     //关闭
@@ -274,7 +289,7 @@ $(document).ready(function () {
         }
         return rtn;
     }
-  
+
 
 
     // 测试
