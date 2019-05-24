@@ -121,7 +121,7 @@ $(document).ready(function () {
                     break;
                 case 2:
                     // 流量放心用
-                    $('#alink_cm').css('background-image','url(images/a_cm_fangxin.gif)').attr('href','http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=cxfree#wechat_redirect')
+                    $('#alink_cm').css('background-image','url(images/a_cm_fangxin.gif)').attr('href',' https://mp.weixin.qq.com/s/K6W3CaZajWdDb4WgBxJUXQ')
                     break;
                 }
             // 异网移动王卡

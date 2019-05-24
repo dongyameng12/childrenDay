@@ -510,7 +510,7 @@ body section.main {
 html section.main > div:nth-child(1),
 body section.main > div:nth-child(1) {
   width: 7.5rem;
-  height: 7.86rem;
+  height: 7.60rem;
   background: url('../images/main_01.png') no-repeat;
   background-size: cover;
   position: relative;
@@ -522,7 +522,7 @@ body section.main > div:nth-child(1) > a {
 html section.main > div:nth-child(1) > a:nth-child(1),
 body section.main > div:nth-child(1) > a:nth-child(1) {
   position: absolute;
-  top: .3rem;
+  top: .1rem;
   left: .17rem;
   writing-mode: vertical-lr;
   width: .4rem;
@@ -533,7 +533,7 @@ body section.main > div:nth-child(1) > a:nth-child(1) {
 html section.main > div:nth-child(1) > a:nth-child(2),
 body section.main > div:nth-child(1) > a:nth-child(2) {
   position: absolute;
-  top: .2rem;
+  top: .1rem;
   left: 0;
   right: 0;
   margin: auto;
