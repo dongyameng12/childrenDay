@@ -168,8 +168,6 @@ html,body{
                   align-items: center;
                   justify-content: center;
                   >ul{
-                    // width: 5.8rem;
-                    // height: 4.8rem;
                     width: 6.2rem;
                     height: 5.3rem;
                     display: flex;
@@ -692,8 +690,6 @@ html,body{
                             text-align: center;
                             color: #fff;
                             font-size: .24rem;
-                            text-align: justify;
-                            text-align-last: justify;
                             padding: .15rem 0;
                             box-sizing: border-box;
                         }
@@ -724,7 +720,7 @@ html,body{
                             right: 0;
                             margin: auto;
                             text-align: center;
-                            font-size: .24rem;
+                            font-size: .28rem;
                             color: #b35125;
                             height: 1.58rem;
                             display: flex;
@@ -736,7 +732,7 @@ html,body{
                 }
                 &:nth-child(2){
                     width: 5.87rem;
-                    height: 3.37rem;
+                    height:3.1rem;
                     margin: 0 auto;
                     display: flex;
                     align-items: flex-end;
@@ -1259,48 +1255,59 @@ html,body{
         }
         // 摇晃
           .cake{
-            animation:move 4s infinite;
-            -webkit-animation:move 4s  infinite;
+            animation:shake 4s infinite;
+            -webkit-animation:shake 4s  infinite;
             }
-          @keyframes move
-          {
-              0%, 65%{ 
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
+        @-webkit-keyframes shake {
+                from,
+                to {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+                }
+              
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                  -webkit-transform: translate3d(-10px, 0, 0);
+                  transform: translate3d(-10px, 0, 0);
+                }
+              
+                20%,
+                40%,
+                60%,
+                80% {
+                  -webkit-transform: translate3d(10px, 0, 0);
+                  transform: translate3d(10px, 0, 0);
+                }
               }
-              70%,80%, 90%  {  
-                -webkit-transform: translate3d(-10px, 0, 0);
-                transform: translate3d(-10px, 0, 0);
-              }
-              75%, 85% ,95% {  
-                -webkit-transform: translate3d(10px, 0, 0);
-                transform: translate3d(10px, 0, 0);
-              }
-              100% {  
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-              }
-          }
-          
-          @-webkit-keyframes move
-          {
-            0%, 65%{ 
-              -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
+              
+              @keyframes shake {
+                from,
+                to {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+                }
+              
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                  -webkit-transform: translate3d(-10px, 0, 0);
+                  transform: translate3d(-10px, 0, 0);
+                }
+              
+                20%,
+                40%,
+                60%,
+                80% {
+                  -webkit-transform: translate3d(10px, 0, 0);
+                  transform: translate3d(10px, 0, 0);
+                }
             }
-            70%,80%, 90%  {  
-              -webkit-transform: translate3d(-10px, 0, 0);
-              transform: translate3d(-10px, 0, 0);
-            }
-            75%, 85% ,95% {  
-              -webkit-transform: translate3d(10px, 0, 0);
-              transform: translate3d(10px, 0, 0);
-            }
-            100% {  
-              -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-            }
-            }
+
         /* 遮罩层 */
         section.mask{
             position: absolute;

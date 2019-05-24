@@ -533,8 +533,6 @@ body section.main > div:nth-child(1) > a:nth-child(1) {
   text-align: center;
   color: #fff;
   font-size: .24rem;
-  text-align: justify;
-  text-align-last: justify;
   padding: .15rem 0;
   box-sizing: border-box;
 }
@@ -566,7 +564,7 @@ body section.main > div:nth-child(1) > div > div {
   right: 0;
   margin: auto;
   text-align: center;
-  font-size: .24rem;
+  font-size: .28rem;
   color: #b35125;
   height: 1.58rem;
   display: flex;
@@ -576,7 +574,7 @@ body section.main > div:nth-child(1) > div > div {
 html section.main > div:nth-child(2),
 body section.main > div:nth-child(2) {
   width: 5.87rem;
-  height: 3.37rem;
+  height: 3.1rem;
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
@@ -1151,53 +1149,51 @@ body .mymove {
 }
 html .cake,
 body .cake {
-  animation: move 4s infinite;
-  -webkit-animation: move 4s  infinite;
+  animation: shake 4s infinite;
+  -webkit-animation: shake 4s  infinite;
 }
-@keyframes move {
-  0%,
-  65% {
+@-webkit-keyframes shake {
+  from,
+  to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+  10%,
+  30%,
+  50%,
   70%,
-  80%,
   90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-  75%,
-  85%,
-  95% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
   }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
 }
-@-webkit-keyframes move {
-  0%,
-  65% {
+@keyframes shake {
+  from,
+  to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+  10%,
+  30%,
+  50%,
   70%,
-  80%,
   90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-  75%,
-  85%,
-  95% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 }
 html section.mask,
