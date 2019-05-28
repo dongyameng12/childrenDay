@@ -248,6 +248,12 @@ $(document).ready(function () {
         }
 
     });
+    // 异网弹窗2，关闭
+    $('.tc_3_close').on('click',function(){
+        $(current_clickclass).removeClass('unling_' + current_change).addClass('allling').addClass('cancel')
+        $('.tc_3').hide();
+        hideMask();
+    })
     //异网流量弹窗 3,修改
     $('#revise').on('click', function () {
         $('.tc_4').hide();

@@ -960,6 +960,18 @@ html,body{
                 >div{
                     margin: 0 auto;
                     &:nth-child(1){
+                        width: 5.32rem;
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-bottom: .2rem;
+                        >p{
+                            width: .6rem;
+                            height: .6rem;
+                            background: url('../images/close.png') no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                    &:nth-child(2){
                         box-sizing: border-box;
                         padding: .4rem 0 .52rem 0;  
                         width: 5.32rem;
@@ -987,7 +999,7 @@ html,body{
                             }
                         }
                     }
-                    &:nth-child(2){
+                    &:nth-child(3){
                         width: 5.32rem;
                         display: flex;
                         justify-content: space-between;
@@ -996,8 +1008,8 @@ html,body{
                         >a{
                             display: inline-block;
                             &:nth-child(1){
-                                width: 2.44rem;
-                                height: .94rem;
+                                width: 2.33rem;
+                                height: .82rem;
                                 background: url('../images/tc_btn_02.png') no-repeat;
                                 background-size: cover;
                             }   
@@ -1016,39 +1028,54 @@ html,body{
             &.tc_3{
                 display: none;
                 >div{
-                    box-sizing: border-box;
-                    width: 5.32rem;
-                    height: 3.81rem;
-                    background: url('../images/tc_01.png') no-repeat;
-                    background-size: cover;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content:center;
-                    align-items: center;
-                    margin:0 auto;
-                    font-size: .3rem;
-                    >div{
+                    &:nth-child(1){
+                        width: 5.32rem;
                         display: flex;
+                        justify-content: flex-end;
+                        margin: 0 auto .2rem;
+                        >p{
+                            width: .6rem;
+                            height: .6rem;
+                            background: url('../images/close.png') no-repeat;
+                            background-size: cover;
+                        }       
+                    }
+                    &:nth-child(2){
+                        box-sizing: border-box;
+                        width: 5.32rem;
+                        height: 3.81rem;
+                        background: url('../images/tc_01.png') no-repeat;
+                        background-size: cover;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
                         align-items: center;
-                        margin: .6rem auto;
-                        >input{
-                            width: 2.61rem;
-                            height: .52rem;
-                            border: solid 1px #449bef;
-                            background-color:#ececd7;
-                            box-sizing: border-box;
-                            padding-left: .1rem;
+                        margin:0 auto;
+                        font-size: .3rem;
+                        >div{
                             display: flex;
                             align-items: center;
-                            border-radius: .26rem;
-                            margin-left: .1rem;
+                            margin: .6rem auto;
+                            >input{
+                                width: 2.61rem;
+                                height: .52rem;
+                                border: solid 1px #449bef;
+                                background-color:#ececd7;
+                                box-sizing: border-box;
+                                padding-left: .1rem;
+                                display: flex;
+                                align-items: center;
+                                border-radius: .26rem;
+                                margin-left: .1rem;
+                            }
+                        }
+                        >p{
+                            &:nth-child(3){
+                                font-size: .28rem;
+                            }
                         }
                     }
-                    >p{
-                        &:nth-child(3){
-                            font-size: .28rem;
-                        }
-                    }
+                  
                     
                 }
                 >a{
