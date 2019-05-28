@@ -298,7 +298,8 @@ $(document).ready(function () {
         return rtn;
     }
 
-
+    // 其他福利
+    $('#qita').attr("href","http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2FyiWang2019%2Findex.do&response_type=code&scope=snsapi_base&state=yiWang2019#wechat_redirect")
 
     // 测试
     $('.test2').on('click', function () {
