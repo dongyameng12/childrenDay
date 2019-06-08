@@ -105,7 +105,6 @@ $(document).ready(function () {
         $('.tc_rule').show();
     })
     // 点击主页的按钮
-  
     $('.lottery').on('click', function () {
         // 左边
         if ($(this).hasClass('main_left')) {
@@ -114,7 +113,7 @@ $(document).ready(function () {
             //本网链接
             switch (data_left) {
                 case 0:
-                    // 手厅活动
+                    // 5元欢享券 
                     $('#alink_cm').css('background-image', 'url(images/a_cm_shouting.gif)').attr('href', 'http://sc.bj.chinamobile.com/activity/loading/loading.html?actname=coupon')
                     break;
                 case 1:
